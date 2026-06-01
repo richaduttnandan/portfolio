@@ -1,0 +1,1079 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Richa Dutt Nandan — Strategic Marketing Leader</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --gold: #8B6914;
+    --gold-light: #C9A84C;
+    --gold-pale: #E8D5A3;
+    --cream: #F5F0E8;
+    --cream-dark: #EDE5D8;
+    --brown: #3D2B0F;
+    --brown-mid: #6B4E2A;
+    --text: #2A1F0D;
+    --text-muted: #7A6A52;
+    --white: #FDFAF5;
+    --accent: #D4AF37;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--cream);
+    color: var(--text);
+    overflow-x: hidden;
+  }
+
+  /* ── NAV ── */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    background: rgba(245,240,232,0.92);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(139,105,20,0.15);
+    padding: 0 5%;
+    display: flex; align-items: center; justify-content: space-between;
+    height: 64px;
+  }
+  .nav-logo {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.25rem; font-weight: 600;
+    color: var(--gold); letter-spacing: 0.02em;
+  }
+  .nav-links { display: flex; gap: 2rem; list-style: none; }
+  .nav-links a {
+    font-size: 0.78rem; letter-spacing: 0.12em; text-transform: uppercase;
+    color: var(--text-muted); text-decoration: none; font-weight: 500;
+    transition: color 0.25s;
+  }
+  .nav-links a:hover { color: var(--gold); }
+
+  /* ── HERO ── */
+  .hero {
+    min-height: 100vh;
+    display: grid; grid-template-columns: 1fr 1fr;
+    padding-top: 64px;
+    position: relative; overflow: hidden;
+  }
+  .hero::before {
+    content: '';
+    position: absolute; top: 0; right: 0;
+    width: 55%; height: 100%;
+    background: linear-gradient(135deg, var(--cream-dark) 0%, #DDD0B8 100%);
+    clip-path: polygon(8% 0%, 100% 0%, 100% 100%, 0% 100%);
+    z-index: 0;
+  }
+  .hero-text {
+    position: relative; z-index: 1;
+    padding: 10% 6% 8% 8%;
+    display: flex; flex-direction: column; justify-content: center;
+  }
+  .hero-eyebrow {
+    font-size: 0.72rem; letter-spacing: 0.2em; text-transform: uppercase;
+    color: var(--gold); font-weight: 500; margin-bottom: 1.5rem;
+    display: flex; align-items: center; gap: 0.8rem;
+  }
+  .hero-eyebrow::before {
+    content: ''; display: inline-block;
+    width: 32px; height: 1px; background: var(--gold);
+  }
+  .hero-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(3rem, 5vw, 5rem);
+    font-weight: 300; line-height: 1.05;
+    color: var(--brown);
+    margin-bottom: 0.5rem;
+  }
+  .hero-name em {
+    font-style: italic; color: var(--gold);
+    display: block;
+  }
+  .hero-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(1rem, 1.8vw, 1.35rem);
+    color: var(--gold); font-weight: 400;
+    font-style: italic; margin-bottom: 2rem;
+  }
+  .hero-desc {
+    font-size: 0.92rem; line-height: 1.75;
+    color: var(--text-muted); max-width: 440px;
+    margin-bottom: 3rem; font-weight: 300;
+  }
+  .hero-ctas { display: flex; gap: 1rem; flex-wrap: wrap; }
+  .btn-primary {
+    background: var(--gold); color: var(--white);
+    padding: 0.75rem 2rem; font-size: 0.78rem;
+    letter-spacing: 0.1em; text-transform: uppercase;
+    text-decoration: none; font-weight: 500;
+    transition: background 0.25s, transform 0.2s;
+    display: inline-block;
+  }
+  .btn-primary:hover { background: var(--brown-mid); transform: translateY(-2px); }
+  .btn-outline {
+    border: 1px solid var(--gold); color: var(--gold);
+    padding: 0.75rem 2rem; font-size: 0.78rem;
+    letter-spacing: 0.1em; text-transform: uppercase;
+    text-decoration: none; font-weight: 500;
+    transition: all 0.25s; display: inline-block;
+  }
+  .btn-outline:hover { background: var(--gold); color: var(--white); }
+
+  .hero-visual {
+    position: relative; z-index: 1;
+    display: flex; flex-direction: column;
+    justify-content: center; align-items: flex-end;
+    padding: 8% 8% 8% 4%;
+  }
+  .stats-grid {
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: 1.5rem; width: 100%; max-width: 380px;
+  }
+  .stat-card {
+    background: var(--white);
+    padding: 1.5rem 1.25rem;
+    border-left: 3px solid var(--gold);
+    animation: fadeUp 0.6s ease both;
+  }
+  .stat-card:nth-child(2) { animation-delay: 0.1s; }
+  .stat-card:nth-child(3) { animation-delay: 0.2s; }
+  .stat-card:nth-child(4) { animation-delay: 0.3s; }
+  .stat-card:nth-child(5) { animation-delay: 0.4s; }
+  .stat-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2.4rem; font-weight: 600;
+    color: var(--gold); line-height: 1;
+    margin-bottom: 0.3rem;
+  }
+  .stat-label {
+    font-size: 0.72rem; color: var(--text-muted);
+    letter-spacing: 0.05em; font-weight: 400;
+  }
+
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  /* ── SECTIONS ── */
+  section { padding: 6rem 8%; }
+  .section-label {
+    font-size: 0.72rem; letter-spacing: 0.2em; text-transform: uppercase;
+    color: var(--gold); font-weight: 500; margin-bottom: 1rem;
+    display: flex; align-items: center; gap: 0.8rem;
+  }
+  .section-label::before {
+    content: ''; width: 32px; height: 1px; background: var(--gold);
+  }
+  .section-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(2rem, 3.5vw, 3rem);
+    font-weight: 300; color: var(--brown);
+    line-height: 1.15; margin-bottom: 3rem;
+  }
+  .section-title em { font-style: italic; color: var(--gold); }
+
+  /* ── ABOUT ── */
+  #about { background: var(--white); }
+  .about-grid {
+    display: grid; grid-template-columns: 1.2fr 1fr;
+    gap: 6rem; align-items: center;
+  }
+  .about-text p {
+    font-size: 1rem; line-height: 1.85;
+    color: var(--text-muted); margin-bottom: 1.25rem; font-weight: 300;
+  }
+  .about-text p strong { color: var(--brown); font-weight: 500; }
+  .about-pull {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.6rem; font-style: italic;
+    color: var(--gold); line-height: 1.4;
+    border-left: 3px solid var(--gold);
+    padding-left: 1.5rem; margin: 2rem 0;
+  }
+
+  /* ── SKILLS ── */
+  #skills { background: var(--cream); }
+  .skills-layout {
+    display: grid; grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+  .skill-group {
+    background: var(--white);
+    padding: 2.5rem 2rem;
+    border-top: 3px solid var(--gold);
+    transition: transform 0.25s, box-shadow 0.25s;
+  }
+  .skill-group:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 16px 40px rgba(139,105,20,0.12);
+  }
+  .skill-group-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.1rem; font-weight: 600;
+    color: var(--brown); margin-bottom: 1.25rem;
+  }
+  .skill-tags { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+  .tag {
+    font-size: 0.72rem; padding: 0.3rem 0.75rem;
+    background: var(--cream); color: var(--text-muted);
+    letter-spacing: 0.04em; font-weight: 400;
+    border: 1px solid rgba(139,105,20,0.2);
+  }
+
+  /* ── EXPERIENCE ── */
+  #experience { background: var(--white); }
+  .timeline { position: relative; padding-left: 2rem; }
+  .timeline::before {
+    content: ''; position: absolute;
+    left: 0; top: 0; bottom: 0;
+    width: 1px; background: var(--gold-pale);
+  }
+  .timeline-item {
+    position: relative; margin-bottom: 3rem;
+    padding-left: 2rem;
+  }
+  .timeline-dot {
+    position: absolute; left: -2rem;
+    top: 0.3rem;
+    width: 10px; height: 10px;
+    background: var(--gold);
+    border-radius: 50%;
+    transform: translateX(-4.5px);
+  }
+  .job-header {
+    display: flex; justify-content: space-between;
+    align-items: flex-start; flex-wrap: wrap;
+    margin-bottom: 0.5rem; gap: 0.5rem;
+  }
+  .job-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.3rem; font-weight: 600;
+    color: var(--brown);
+  }
+  .job-period {
+    font-size: 0.75rem; color: var(--gold);
+    letter-spacing: 0.08em; font-weight: 500;
+    white-space: nowrap;
+  }
+  .job-company {
+    font-size: 0.85rem; color: var(--gold-light);
+    font-style: italic; margin-bottom: 0.75rem; font-weight: 400;
+  }
+  .job-bullets { list-style: none; }
+  .job-bullets li {
+    font-size: 0.88rem; color: var(--text-muted);
+    line-height: 1.7; padding-left: 1rem; position: relative;
+    margin-bottom: 0.4rem; font-weight: 300;
+  }
+  .job-bullets li::before {
+    content: '—'; position: absolute; left: 0;
+    color: var(--gold); font-size: 0.75rem;
+  }
+
+  /* ── IMPACT ── */
+  #impact {
+    background: var(--brown);
+    position: relative; overflow: hidden;
+  }
+  #impact::before {
+    content: '';
+    position: absolute; top: -50%; left: -10%;
+    width: 600px; height: 600px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(201,168,76,0.12) 0%, transparent 70%);
+  }
+  #impact .section-label { color: var(--gold-pale); }
+  #impact .section-label::before { background: var(--gold-pale); }
+  #impact .section-title { color: var(--cream); }
+  .impact-grid {
+    display: grid; grid-template-columns: repeat(3, 1fr);
+    gap: 2px;
+  }
+  .impact-card {
+    background: rgba(255,255,255,0.05);
+    padding: 2.5rem 2rem;
+    text-align: center;
+    border: 1px solid rgba(201,168,76,0.15);
+    transition: background 0.25s;
+  }
+  .impact-card:hover { background: rgba(201,168,76,0.1); }
+  .impact-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 3.5rem; font-weight: 300;
+    color: var(--gold-light); line-height: 1;
+    margin-bottom: 0.5rem;
+  }
+  .impact-desc {
+    font-size: 0.8rem; color: var(--gold-pale);
+    letter-spacing: 0.06em; line-height: 1.5;
+    font-weight: 300;
+  }
+
+  /* ── PORTFOLIO ── */
+  #portfolio { background: var(--cream); }
+  .portfolio-grid {
+    display: grid; grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
+  .portfolio-card {
+    background: var(--white);
+    padding: 2rem;
+    border-bottom: 3px solid transparent;
+    transition: border-color 0.25s, transform 0.25s, box-shadow 0.25s;
+    cursor: default;
+  }
+  .portfolio-card:hover {
+    border-color: var(--gold);
+    transform: translateY(-4px);
+    box-shadow: 0 12px 32px rgba(139,105,20,0.1);
+  }
+  .pc-icon {
+    font-size: 1.8rem; margin-bottom: 1rem;
+    display: block;
+  }
+  .pc-category {
+    font-size: 0.68rem; letter-spacing: 0.15em; text-transform: uppercase;
+    color: var(--gold); font-weight: 500; margin-bottom: 0.5rem;
+  }
+  .pc-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.15rem; font-weight: 600;
+    color: var(--brown); margin-bottom: 0.75rem;
+    line-height: 1.3;
+  }
+  .pc-desc {
+    font-size: 0.82rem; color: var(--text-muted);
+    line-height: 1.7; font-weight: 300;
+  }
+  .pc-metric {
+    margin-top: 1rem; padding-top: 1rem;
+    border-top: 1px solid var(--cream-dark);
+    font-size: 0.75rem; color: var(--gold);
+    font-weight: 500; letter-spacing: 0.04em;
+  }
+
+  /* ── TOOLS ── */
+  #tools { background: var(--white); }
+  .tools-grid {
+    display: grid; grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+  }
+  .tool-group h4 {
+    font-size: 0.72rem; letter-spacing: 0.12em; text-transform: uppercase;
+    color: var(--gold); font-weight: 500; margin-bottom: 0.75rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--gold-pale);
+  }
+  .tool-list { list-style: none; }
+  .tool-list li {
+    font-size: 0.82rem; color: var(--text-muted);
+    padding: 0.3rem 0; border-bottom: 1px solid var(--cream-dark);
+    font-weight: 300;
+  }
+
+  /* ── EVENTS ── */
+  #events { background: var(--cream); }
+  .events-year-group { margin-bottom: 2.5rem; }
+  .events-year-label {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.6rem; font-weight: 300;
+    color: var(--brown); margin-bottom: 1.25rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--gold-pale);
+    display: flex; align-items: center; gap: 1rem;
+  }
+  .events-year-label span {
+    font-size: 0.68rem; letter-spacing: 0.12em; text-transform: uppercase;
+    color: var(--text-muted); font-weight: 400; font-family: 'DM Sans', sans-serif;
+  }
+  .events-row {
+    display: grid; grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+  }
+  .event-card {
+    background: var(--white);
+    padding: 1.25rem 1.25rem 1rem;
+    border-top: 3px solid var(--gold-pale);
+    transition: border-color 0.25s, transform 0.25s, box-shadow 0.25s;
+  }
+  .event-card:hover {
+    border-color: var(--gold);
+    transform: translateY(-4px);
+    box-shadow: 0 10px 28px rgba(139,105,20,0.1);
+  }
+  .event-card.upcoming {
+    border-top-color: var(--gold);
+    background: linear-gradient(135deg, #fffdf7 0%, #f9f4e8 100%);
+  }
+  .event-badge {
+    font-size: 0.62rem; letter-spacing: 0.15em; text-transform: uppercase;
+    color: var(--white); background: var(--gold);
+    padding: 0.18rem 0.5rem; display: inline-block;
+    margin-bottom: 0.5rem; font-weight: 500;
+  }
+  .event-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.05rem; font-weight: 600;
+    color: var(--brown); margin-bottom: 0.3rem;
+    line-height: 1.25;
+  }
+  .event-date {
+    font-size: 0.72rem; color: var(--gold); font-weight: 500;
+    margin-bottom: 0.2rem; letter-spacing: 0.03em;
+  }
+  .event-loc {
+    font-size: 0.75rem; color: var(--text-muted); font-weight: 300;
+  }
+
+  /* ── EDUCATION / CERTS ── */
+  #education { background: var(--white); }
+  .edu-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; }
+  .edu-item {
+    border-left: 3px solid var(--gold);
+    padding-left: 1.5rem; margin-bottom: 2rem;
+  }
+  .edu-degree {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.15rem; font-weight: 600; color: var(--brown);
+    margin-bottom: 0.2rem;
+  }
+  .edu-inst { font-size: 0.85rem; color: var(--gold-light); font-style: italic; margin-bottom: 0.2rem; }
+  .edu-year { font-size: 0.75rem; color: var(--text-muted); }
+  .cert-list { list-style: none; }
+  .cert-list li {
+    font-size: 0.85rem; color: var(--text-muted);
+    padding: 0.6rem 0; border-bottom: 1px solid var(--cream-dark);
+    display: flex; align-items: center; gap: 0.75rem;
+    font-weight: 300;
+  }
+  .cert-list li::before {
+    content: '✦'; color: var(--gold); font-size: 0.55rem;
+    flex-shrink: 0;
+  }
+
+  /* ── CONTACT ── */
+  #contact {
+    background: var(--brown);
+    text-align: center;
+    position: relative; overflow: hidden;
+  }
+  #contact::after {
+    content: 'RICHA';
+    position: absolute;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 20rem; font-weight: 600;
+    color: rgba(255,255,255,0.02);
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none; white-space: nowrap;
+  }
+  #contact .section-label { color: var(--gold-pale); justify-content: center; }
+  #contact .section-label::before { background: var(--gold-pale); }
+  #contact .section-title { color: var(--cream); }
+  .contact-grid {
+    display: flex; justify-content: center; gap: 3rem;
+    flex-wrap: wrap; margin-bottom: 3rem;
+  }
+  .contact-item { text-align: center; }
+  .contact-label {
+    font-size: 0.68rem; letter-spacing: 0.18em; text-transform: uppercase;
+    color: var(--gold-light); margin-bottom: 0.4rem; font-weight: 500;
+  }
+  .contact-val {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.05rem; color: var(--cream);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+  .contact-val:hover { color: var(--gold-light); }
+  .divider {
+    width: 60px; height: 1px;
+    background: rgba(201,168,76,0.4);
+    margin: 0 auto 3rem;
+  }
+  .social-links { display: flex; gap: 1.5rem; justify-content: center; }
+  .social-link {
+    font-size: 0.72rem; letter-spacing: 0.15em; text-transform: uppercase;
+    color: var(--gold-light); text-decoration: none;
+    border: 1px solid rgba(201,168,76,0.3);
+    padding: 0.6rem 1.5rem;
+    transition: all 0.25s;
+  }
+  .social-link:hover { background: var(--gold); color: var(--white); border-color: var(--gold); }
+
+  footer {
+    background: #1A1000;
+    padding: 1.5rem 8%;
+    text-align: center;
+  }
+  footer p {
+    font-size: 0.72rem; color: rgba(255,255,255,0.25);
+    letter-spacing: 0.08em;
+  }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 960px) {
+    .hero { grid-template-columns: 1fr; min-height: auto; }
+    .hero::before { display: none; }
+    .hero-text { padding: 8rem 6% 3rem; }
+    .hero-visual { padding: 2rem 6% 4rem; }
+    .stats-grid { max-width: 100%; }
+    .about-grid, .edu-grid { grid-template-columns: 1fr; gap: 3rem; }
+    .skills-layout, .portfolio-grid, .impact-grid { grid-template-columns: 1fr 1fr; }
+    .tools-grid { grid-template-columns: 1fr 1fr; }
+    .events-row { grid-template-columns: 1fr 1fr !important; }
+    nav { padding: 0 4%; }
+    .nav-links { gap: 1.2rem; }
+  }
+  @media (max-width: 600px) {
+    .skills-layout, .portfolio-grid, .impact-grid,
+    .tools-grid { grid-template-columns: 1fr; }
+    .events-row { grid-template-columns: 1fr !important; }
+    .hero-ctas { flex-direction: column; }
+    .contact-grid { flex-direction: column; gap: 2rem; }
+    .nav-links { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-logo">Richa Dutt Nandan</div>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#impact">Impact</a></li>
+    <li><a href="#portfolio">Portfolio</a></li>
+    <li><a href="#tools">Tools</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-text">
+    <p class="hero-eyebrow">Strategic Marketing Leader</p>
+    <h1 class="hero-name">
+      Hello,<br>
+      <em>I am Richa.</em>
+    </h1>
+    <p class="hero-title">From Insight to Impact in Marketing Analytics, Digital Strategy, Global Campaigns & B2B SaaS</p>
+    <p class="hero-desc">
+      15+ years driving brand growth through data, creativity & storytelling — across Europe, Asia, and the Middle East. Specialising in B2B marketing, GTM strategy, and integrated campaigns that deliver measurable results.
+    </p>
+    <div class="hero-ctas">
+      <a href="#portfolio" class="btn-primary">View My Work</a>
+      <a href="#contact" class="btn-outline">Get In Touch</a>
+    </div>
+  </div>
+  <div class="hero-visual">
+    <div class="stats-grid">
+      <div class="stat-card">
+        <div class="stat-num">15+</div>
+        <div class="stat-label">Years of Experience</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-num">40%</div>
+        <div class="stat-label">YoY Organic Traffic Growth</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-num">2.5×</div>
+        <div class="stat-label">Inbound Leads Generated</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-num">15+</div>
+        <div class="stat-label">Countries Reached</div>
+      </div>
+      <div class="stat-card" style="grid-column: span 2;">
+        <div class="stat-num">€1M+</div>
+        <div class="stat-label">Annual Marketing Budget Managed</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="about-grid">
+    <div class="about-text">
+      <p class="section-label">About Me</p>
+      <h2 class="section-title">Driving brand growth<br><em>through data & storytelling</em></h2>
+      <p>With over <strong>14 years of experience in marketing</strong>, I specialise in building and executing high-impact B2B strategies across global markets. My expertise spans digital marketing, brand and campaign management, and data-driven market analysis — supported by industry-recognised certifications.</p>
+      <p>I excel in leading cross-functional teams and driving integrated campaigns across digital, social, events, and content platforms. Skilled in aligning marketing with business objectives, I leverage insights, customer behaviour, and analytics to strengthen brand positioning, optimise performance, and accelerate growth.</p>
+      <div class="about-pull">"Driving Brand Growth Through Data, Creativity & Storytelling"</div>
+      <p>Based in Mumbai, India — available for <strong>senior remote B2B marketing roles</strong> globally.</p>
+    </div>
+    <div>
+      <p class="section-label">Recognition</p>
+      <div style="display: flex; flex-direction: column; gap: 1.25rem; margin-top: 1.5rem;">
+        <div style="border-left: 3px solid var(--gold); padding-left: 1.25rem;">
+          <div style="font-size: 0.72rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.3rem;">2025 & 2023</div>
+          <div style="font-family: 'Cormorant Garamond', serif; font-size: 1.05rem; color: var(--brown); font-weight: 600;">SMART4SEA Europort Cyber Security Award</div>
+          <div style="font-size: 0.82rem; color: var(--text-muted); margin-top: 0.2rem;">Shortlisted nominee — innovation & compliance excellence in shipping</div>
+        </div>
+        <div style="border-left: 3px solid var(--gold); padding-left: 1.25rem;">
+          <div style="font-size: 0.72rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.3rem;">2017</div>
+          <div style="font-family: 'Cormorant Garamond', serif; font-size: 1.05rem; color: var(--brown); font-weight: 600;">Gem of the Month</div>
+          <div style="font-size: 0.82rem; color: var(--text-muted); margin-top: 0.2rem;">Motilal Oswal Financial Services</div>
+        </div>
+        <div style="border-left: 3px solid var(--gold); padding-left: 1.25rem;">
+          <div style="font-size: 0.72rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.3rem;">2011</div>
+          <div style="font-family: 'Cormorant Garamond', serif; font-size: 1.05rem; color: var(--brown); font-weight: 600;">Top Performer</div>
+          <div style="font-size: 0.82rem; color: var(--text-muted); margin-top: 0.2rem;">Citibank India</div>
+        </div>
+        <div style="background: var(--cream); padding: 1.25rem 1.5rem; margin-top: 0.5rem;">
+          <div style="font-size: 0.72rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.75rem;">Languages</div>
+          <div style="display: flex; gap: 1rem;">
+            <span style="font-size: 0.82rem; color: var(--text-muted);">🇬🇧 English — Fluent</span>
+            <span style="font-size: 0.82rem; color: var(--text-muted);">🇩🇪 German — B1</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+  <p class="section-label">Skills Snapshot</p>
+  <h2 class="section-title">Areas of <em>Expertise</em></h2>
+  <div class="skills-layout">
+    <div class="skill-group">
+      <div class="skill-group-title">Core Marketing</div>
+      <div class="skill-tags">
+        <span class="tag">Product Marketing (B2B SaaS)</span>
+        <span class="tag">Global Brand Strategy</span>
+        <span class="tag">GTM Strategy</span>
+        <span class="tag">SEO / SEM</span>
+        <span class="tag">Paid Ads</span>
+        <span class="tag">Performance Analytics</span>
+        <span class="tag">Campaign Development</span>
+        <span class="tag">Event & Webinar Marketing</span>
+        <span class="tag">Email Marketing</span>
+        <span class="tag">Social Media</span>
+      </div>
+    </div>
+    <div class="skill-group">
+      <div class="skill-group-title">Strategic & Analytical</div>
+      <div class="skill-tags">
+        <span class="tag">Market Research</span>
+        <span class="tag">Competitive Intelligence</span>
+        <span class="tag">Budget Management</span>
+        <span class="tag">Performance Metrics</span>
+        <span class="tag">CRM & Marketing Automation</span>
+        <span class="tag">Data-driven Decisions</span>
+        <span class="tag">Funnel Optimisation</span>
+        <span class="tag">ABM</span>
+        <span class="tag">Demand Generation</span>
+      </div>
+    </div>
+    <div class="skill-group">
+      <div class="skill-group-title">Leadership & Collaboration</div>
+      <div class="skill-tags">
+        <span class="tag">Cross-functional Teams</span>
+        <span class="tag">Stakeholder Management</span>
+        <span class="tag">Team Leadership</span>
+        <span class="tag">Project Management</span>
+        <span class="tag">Sales Alignment</span>
+        <span class="tag">Vendor Coordination</span>
+        <span class="tag">Agency Management</span>
+        <span class="tag">Remote Collaboration</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience">
+  <p class="section-label">Career Journey</p>
+  <h2 class="section-title">Professional <em>Experience</em></h2>
+  <div class="timeline">
+    <div class="timeline-item">
+      <div class="timeline-dot"></div>
+      <div class="job-header">
+        <div class="job-title">Global Marketing Manager</div>
+        <div class="job-period">Apr 2021 — Present</div>
+      </div>
+      <div class="job-company">Varuna Marine Services B.V. — Amsterdam (Remote)</div>
+      <ul class="job-bullets">
+        <li>Delivered 40% YoY organic traffic growth, 3× engagement, and 2.5× inbound leads via integrated SEO, ABM, events, and paid campaigns.</li>
+        <li>Spearheaded global GTM strategy for maritime compliance, emissions management, and digital SaaS product portfolios across 15+ markets in Europe, Japan, Asia, and the Middle East.</li>
+        <li>Owned ~€1M annual marketing budget; built sales enablement collateral and implemented HubSpot + GA4 attribution to optimise pipeline and ROI.</li>
+        <li>Led SEO initiative covering 25 landing pages and 26 blogs — achieving 45% organic traffic growth and 18.9% bounce rate reduction in 8 months.</li>
+        <li>Managed global events branding for Europort 2023, Sea Asia 2025, Bariship 2025, and Posidonia 2022.</li>
+        <li>Secured organic media coverage in HuffPost, Ship & Bunker, One Magazine, and Naftemporiki.</li>
+      </ul>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-dot"></div>
+      <div class="job-header">
+        <div class="job-title">Social Media Consultant</div>
+        <div class="job-period">Jan 2020 — Mar 2021</div>
+      </div>
+      <div class="job-company">IIEDM — Mumbai</div>
+      <ul class="job-bullets">
+        <li>Increased student engagement by 50% through curriculum redesign and performance-driven content marketing in the EdTech sector.</li>
+      </ul>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-dot"></div>
+      <div class="job-header">
+        <div class="job-title">Marketing Manager</div>
+        <div class="job-period">Jan 2019 — Jun 2019</div>
+      </div>
+      <div class="job-company">Anunta Tech — Mumbai</div>
+      <ul class="job-bullets">
+        <li>Grew MQLs by 35%, LinkedIn engagement by 45%, and cut cost per lead by 20% through ABM-led GTM with targeted campaigns and email automation.</li>
+        <li>Managed external agencies across website, Google Ads, SEO, and lead generation.</li>
+      </ul>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-dot"></div>
+      <div class="job-header">
+        <div class="job-title">Digital Marketing Manager</div>
+        <div class="job-period">Feb 2016 — Oct 2018</div>
+      </div>
+      <div class="job-company">Motilal Oswal Financial Services — Mumbai</div>
+      <ul class="job-bullets">
+        <li>Boosted lead generation by 60% and increased investor sign-ups via omni-channel GTM combining paid media, influencer content, and brand campaigns (#ThinkEquityThinkMotilalOswal).</li>
+        <li>Implemented full-funnel analytics and reporting frameworks to track ROI, attribution, and customer journeys across BFSI digital products.</li>
+      </ul>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-dot"></div>
+      <div class="job-header">
+        <div class="job-title">Digital Marketing & Social Media Analyst</div>
+        <div class="job-period">Aug 2014 — Jan 2016</div>
+      </div>
+      <div class="job-company">Enterprise Social Media — Mumbai</div>
+      <ul class="job-bullets">
+        <li>Led a team of 8 and directed multi-vendor agencies across website, Google Ads, SEO, and lead generation.</li>
+        <li>Implemented full-funnel analytics and attribution frameworks; recognised as Gem of the Month (2017).</li>
+      </ul>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-dot"></div>
+      <div class="job-header">
+        <div class="job-title">Senior Executive — Digital Marketing</div>
+        <div class="job-period">Aug 2012 — Mar 2014</div>
+      </div>
+      <div class="job-company">Bombay Dyeing & Mfg. Co. — Mumbai</div>
+      <ul class="job-bullets">
+        <li>Grew online sales by 30% and website traffic by 50% through integrated SEO/SEM, content strategy, and social campaigns.</li>
+      </ul>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-dot"></div>
+      <div class="job-header">
+        <div class="job-title">Senior Banking Executive</div>
+        <div class="job-period">May 2010 — Mar 2012</div>
+      </div>
+      <div class="job-company">Citibank NA — Mumbai</div>
+      <ul class="job-bullets">
+        <li>Contributed to 20% YoY branch revenue growth through account acquisition and cross-sell initiatives; recognised as Top Performer (2011).</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- IMPACT -->
+<section id="impact">
+  <p class="section-label">Measurable Results</p>
+  <h2 class="section-title" style="color: var(--cream);">Numbers That <em>Speak</em></h2>
+  <div class="impact-grid">
+    <div class="impact-card">
+      <div class="impact-num">40%</div>
+      <div class="impact-desc">YoY Organic Traffic Growth</div>
+    </div>
+    <div class="impact-card">
+      <div class="impact-num">2.5×</div>
+      <div class="impact-desc">Inbound Leads Delivered</div>
+    </div>
+    <div class="impact-card">
+      <div class="impact-num">60%</div>
+      <div class="impact-desc">Lead Generation Lift</div>
+    </div>
+    <div class="impact-card">
+      <div class="impact-num">67%</div>
+      <div class="impact-desc">Increase in Website Sessions</div>
+    </div>
+    <div class="impact-card">
+      <div class="impact-num">35%</div>
+      <div class="impact-desc">MQL Growth at Anunta Tech</div>
+    </div>
+    <div class="impact-card">
+      <div class="impact-num">5×</div>
+      <div class="impact-desc">Higher CTR on Multi-channel Campaigns</div>
+    </div>
+  </div>
+</section>
+
+<!-- PORTFOLIO HIGHLIGHTS -->
+<section id="portfolio">
+  <p class="section-label">Work Highlights</p>
+  <h2 class="section-title">Portfolio <em>Showcase</em></h2>
+  <div class="portfolio-grid">
+    <div class="portfolio-card">
+      <span class="pc-icon">📈</span>
+      <div class="pc-category">SEO & Performance</div>
+      <div class="pc-title">SEO Strategy & Execution — Varuna Marine</div>
+      <p class="pc-desc">Comprehensive SEO initiative covering 25 landing pages and 26 blogs. Keyword research, on-page optimisation, technical SEO enhancements, and content alignment for maritime compliance topics.</p>
+      <div class="pc-metric">↑ 45% organic traffic · ↓ 18.9% bounce rate</div>
+    </div>
+    <div class="portfolio-card">
+      <span class="pc-icon">✍️</span>
+      <div class="pc-category">Content & Thought Leadership</div>
+      <div class="pc-title">Maritime Compliance Blog Series</div>
+      <p class="pc-desc">SEO-optimised blog series simplifying complex maritime regulations — EU ETS, ballast water management, and cyber security — for global shipping audiences.</p>
+      <div class="pc-metric">↑ 38.4% page view growth</div>
+    </div>
+    <div class="portfolio-card">
+      <span class="pc-icon">📧</span>
+      <div class="pc-category">Email Marketing</div>
+      <div class="pc-title">Quarterly Maritime Digest Newsletter</div>
+      <p class="pc-desc">Created and managed the "Navigating Innovation, Compliance & Collaboration" newsletter series, delivering regulatory updates, thought leadership, and service highlights to global stakeholders.</p>
+      <div class="pc-metric">Optimised CTAs · Maximised open & click-through rates</div>
+    </div>
+    <div class="portfolio-card">
+      <span class="pc-icon">🎯</span>
+      <div class="pc-category">Brand Campaigns</div>
+      <div class="pc-title">#ThinkEquityThinkMotilalOswal</div>
+      <p class="pc-desc">App-based equity awareness campaign for Motilal Oswal driving brand trust, market leadership, and user engagement. Leveraged targeted creatives and in-app messaging to educate investors.</p>
+      <div class="pc-metric">↑ 60% lead generation · Higher investor conversion</div>
+    </div>
+    <div class="portfolio-card">
+      <span class="pc-icon">🗓️</span>
+      <div class="pc-category">Strategic Planning</div>
+      <div class="pc-title">Content Calendar & Multi-channel Strategy</div>
+      <p class="pc-desc">Designed and implemented structured content calendars syncing blogs, SEO, social media, webinars, and brand campaigns. Used Trello and Google Sheets for cross-team collaboration.</p>
+      <div class="pc-metric">+35% publishing consistency · 100% on-time delivery</div>
+    </div>
+    <div class="portfolio-card">
+      <span class="pc-icon">🗺️</span>
+      <div class="pc-category">Visual & Creative</div>
+      <div class="pc-title">Infographics & Brand Visual Assets</div>
+      <p class="pc-desc">In-house design of maritime infographics, brochures, and roll-up banners for global trade shows. All developed in Canva, optimised for web, social media, and print.</p>
+      <div class="pc-metric">4 global events branded · Europort, Sea Asia, Bariship, Posidonia</div>
+    </div>
+  </div>
+</section>
+
+<!-- TOOLS -->
+<section id="tools">
+  <p class="section-label">Tech Stack</p>
+  <h2 class="section-title">Tools & <em>Platforms</em></h2>
+  <div class="tools-grid">
+    <div class="tool-group">
+      <h4>CRM & Automation</h4>
+      <ul class="tool-list">
+        <li>HubSpot</li>
+        <li>Marketo</li>
+        <li>Mailchimp</li>
+        <li>Microsoft Dynamics 365</li>
+      </ul>
+    </div>
+    <div class="tool-group">
+      <h4>Analytics & SEO</h4>
+      <ul class="tool-list">
+        <li>Google Analytics 4 (GA4)</li>
+        <li>Google Tag Manager</li>
+        <li>SEMrush</li>
+        <li>Ahrefs</li>
+        <li>Google Search Console</li>
+      </ul>
+    </div>
+    <div class="tool-group">
+      <h4>Paid Media & Social</h4>
+      <ul class="tool-list">
+        <li>LinkedIn Ads</li>
+        <li>Meta Ads</li>
+        <li>Hootsuite / Buffer</li>
+        <li>Sprout Social</li>
+        <li>Google Ads</li>
+      </ul>
+    </div>
+    <div class="tool-group">
+      <h4>Creative & CMS</h4>
+      <ul class="tool-list">
+        <li>Canva</li>
+        <li>Adobe Creative Suite</li>
+        <li>WordPress / Elementor</li>
+        <li>ChatGPT / Claude AI</li>
+        <li>Advanced Excel</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- EVENTS -->
+<section id="events">
+  <p class="section-label">Global Presence</p>
+  <h2 class="section-title">Events & <em>Conferences</em></h2>
+
+  <!-- Upcoming -->
+  <div class="events-year-group">
+    <div class="events-year-label">Upcoming <span>Coming Soon</span></div>
+    <div class="events-row" style="grid-template-columns: repeat(3,1fr);">
+      <div class="event-card upcoming">
+        <span class="event-badge">Upcoming</span>
+        <div class="event-name">Posidonia 2026</div>
+        <div class="event-date">June 1–5, 2026</div>
+        <div class="event-loc">Athens, Greece</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 2026 -->
+  <div class="events-year-group">
+    <div class="events-year-label">2026 <span>2 events</span></div>
+    <div class="events-row" style="grid-template-columns: repeat(3,1fr);">
+      <div class="event-card">
+        <div class="event-name">Sea Japan 2026</div>
+        <div class="event-date">April 22–24, 2026</div>
+        <div class="event-loc">Tokyo, Japan</div>
+      </div>
+      <div class="event-card">
+        <div class="event-name">Asia Pacific Maritime (APM) 2026</div>
+        <div class="event-date">March 18, 2026</div>
+        <div class="event-loc">Singapore</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 2025 -->
+  <div class="events-year-group">
+    <div class="events-year-label">2025 <span>4 events</span></div>
+    <div class="events-row">
+      <div class="event-card">
+        <div class="event-name">Sea Asia 2025</div>
+        <div class="event-date">March 25, 2025</div>
+        <div class="event-loc">Singapore</div>
+      </div>
+      <div class="event-card">
+        <div class="event-name">Bari-Ship 2025</div>
+        <div class="event-date">May 22, 2025</div>
+        <div class="event-loc">Imabari, Japan</div>
+      </div>
+      <div class="event-card">
+        <div class="event-name">Europort 2025</div>
+        <div class="event-date">November 4, 2025</div>
+        <div class="event-loc">Rotterdam, Netherlands</div>
+      </div>
+      <div class="event-card">
+        <div class="event-name">Marintec China 2025</div>
+        <div class="event-date">December 2, 2025</div>
+        <div class="event-loc">Shanghai, China</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 2024 -->
+  <div class="events-year-group">
+    <div class="events-year-label">2024 <span>2 events</span></div>
+    <div class="events-row" style="grid-template-columns: repeat(3,1fr);">
+      <div class="event-card">
+        <div class="event-name">Posidonia 2024</div>
+        <div class="event-date">June 3, 2024</div>
+        <div class="event-loc">Athens, Greece</div>
+      </div>
+      <div class="event-card">
+        <div class="event-name">SMM Hamburg 2024</div>
+        <div class="event-date">September 3, 2024</div>
+        <div class="event-loc">Hamburg, Germany</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 2023 -->
+  <div class="events-year-group">
+    <div class="events-year-label">2023 <span>1 event</span></div>
+    <div class="events-row" style="grid-template-columns: repeat(3,1fr);">
+      <div class="event-card">
+        <div class="event-name">Europort 2023</div>
+        <div class="event-date">November 7, 2023</div>
+        <div class="event-loc">Rotterdam, Netherlands</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 2022 -->
+  <div class="events-year-group">
+    <div class="events-year-label">2022 <span>1 event</span></div>
+    <div class="events-row" style="grid-template-columns: repeat(3,1fr);">
+      <div class="event-card">
+        <div class="event-name">Posidonia 2022</div>
+        <div class="event-date">June 6, 2022</div>
+        <div class="event-loc">Athens, Greece</div>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+<!-- EDUCATION -->
+<section id="education">
+  <p class="section-label">Credentials</p>
+  <h2 class="section-title">Education & <em>Certifications</em></h2>
+  <div class="edu-grid">
+    <div>
+      <div class="edu-item">
+        <div class="edu-degree">MBA — Finance</div>
+        <div class="edu-inst">Thakur Institute of Management Studies & Research</div>
+        <div class="edu-year">2010</div>
+      </div>
+      <div class="edu-item">
+        <div class="edu-degree">Bachelor of Commerce</div>
+        <div class="edu-inst">University of Mumbai</div>
+        <div class="edu-year">2007</div>
+      </div>
+    </div>
+    <div>
+      <ul class="cert-list">
+        <li>Google Analytics 4 (GA4) — Google</li>
+        <li>Content Marketing & Digital Marketing — HubSpot</li>
+        <li>SEO Strategy Certification — SEMrush</li>
+        <li>Marketing Analytics — Scandinavian Institute of Business Analytics</li>
+        <li>German Language — B1 Certified</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <p class="section-label">Let's Connect</p>
+  <h2 class="section-title" style="margin-bottom: 1.5rem;">Get in <em>Touch</em></h2>
+  <div class="divider"></div>
+  <div class="contact-grid">
+    <div class="contact-item">
+      <div class="contact-label">Email</div>
+      <a href="mailto:richa.dutt79@gmail.com" class="contact-val">richa.dutt79@gmail.com</a>
+    </div>
+    <div class="contact-item">
+      <div class="contact-label">Mobile</div>
+      <a href="tel:+919819994008" class="contact-val">+91 981 999 4008</a>
+    </div>
+    <div class="contact-item">
+      <div class="contact-label">Location</div>
+      <span class="contact-val">Mumbai, India</span>
+    </div>
+  </div>
+  <div class="social-links">
+    <a href="https://www.linkedin.com/in/richaduttnandan/" target="_blank" class="social-link">LinkedIn</a>
+    <a href="https://richaduttnandan.my.canva.site/" target="_blank" class="social-link">Portfolio Site</a>
+  </div>
+</section>
+
+<footer>
+  <p>© 2025 Richa Dutt Nandan — Strategic Marketing & Content Specialist</p>
+</footer>
+
+</body>
+</html>

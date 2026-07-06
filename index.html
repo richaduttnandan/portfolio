@@ -4,347 +4,472 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Richa Dutt Nandan — Strategic Marketing Leader</title>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<meta name="description" content="Richa Dutt Nandan — Strategic B2B marketing leader with 16+ years of experience in global brand strategy, GTM, SEO, and integrated campaigns across maritime, BFSI, and SaaS sectors.">
+<meta property="og:title" content="Richa Dutt Nandan — Strategic Marketing Leader">
+<meta property="og:description" content="From insight to impact: marketing analytics, digital strategy, global campaigns & B2B SaaS.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
   :root {
-    --gold: #8B6914;
-    --gold-light: #C9A84C;
-    --gold-pale: #E8D5A3;
-    --cream: #F5F0E8;
-    --cream-dark: #EDE5D8;
-    --brown: #3D2B0F;
-    --brown-mid: #6B4E2A;
-    --text: #2A1F0D;
-    --text-muted: #7A6A52;
-    --white: #FDFAF5;
-    --accent: #D4AF37;
+    --bg: #070B16;
+    --bg-soft: #0B1122;
+    --card: rgba(255,255,255,0.045);
+    --card-hover: rgba(255,255,255,0.075);
+    --border: rgba(255,255,255,0.09);
+    --border-soft: rgba(255,255,255,0.06);
+    --text: #EDEFF7;
+    --text-muted: #8C93A8;
+    --text-dim: #5B6178;
+
+    --orange: #FF8A50;
+    --pink: #FF3D7F;
+    --purple: #A855F7;
+    --blue: #4F7CFF;
+    --teal: #22D3C5;
+    --gold: #F5B942;
+
+    --grad-brand: linear-gradient(120deg, #FF8A50 0%, #FF3D7F 48%, #A855F7 100%);
+    --grad-soft: linear-gradient(120deg, rgba(255,138,80,0.15), rgba(255,61,127,0.15), rgba(168,85,247,0.15));
   }
 
   * { margin: 0; padding: 0; box-sizing: border-box; }
-
   html { scroll-behavior: smooth; }
 
   body {
-    font-family: 'DM Sans', sans-serif;
-    background: var(--cream);
+    font-family: 'Inter', sans-serif;
+    background: var(--bg);
     color: var(--text);
     overflow-x: hidden;
+    font-weight: 300;
+  }
+
+  ::selection { background: var(--pink); color: #fff; }
+
+  h1, h2, h3, h4, .display {
+    font-family: 'Space Grotesk', sans-serif;
+  }
+
+  /* ── Ambient gradient blobs ── */
+  .glow {
+    position: fixed;
+    border-radius: 50%;
+    filter: blur(90px);
+    pointer-events: none;
+    z-index: 0;
+  }
+  .glow-1 {
+    width: 620px; height: 620px;
+    top: -220px; right: -160px;
+    background: conic-gradient(from 200deg, #FF8A50, #FF3D7F, #C026D3, #4F7CFF, #FF8A50);
+    opacity: 0.28;
   }
 
   /* ── NAV ── */
   nav {
     position: fixed; top: 0; left: 0; right: 0; z-index: 100;
-    background: rgba(245,240,232,0.92);
-    backdrop-filter: blur(12px);
-    border-bottom: 1px solid rgba(139,105,20,0.15);
+    background: rgba(7,11,22,0.7);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-bottom: 1px solid var(--border-soft);
     padding: 0 5%;
     display: flex; align-items: center; justify-content: space-between;
-    height: 64px;
+    height: 72px;
   }
   .nav-logo {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 1.25rem; font-weight: 600;
-    color: var(--gold); letter-spacing: 0.02em;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1.05rem; font-weight: 600;
+    color: var(--text); letter-spacing: -0.01em;
+    display: flex; align-items: center; gap: 0.6rem;
   }
-  .nav-links { display: flex; gap: 2rem; list-style: none; }
+  .nav-logo::before {
+    content: '';
+    width: 9px; height: 9px; border-radius: 50%;
+    background: var(--grad-brand);
+    display: inline-block;
+    box-shadow: 0 0 12px rgba(255,61,127,0.7);
+  }
+  .nav-links { display: flex; gap: 0.3rem; list-style: none; align-items: center; }
   .nav-links a {
-    font-size: 0.78rem; letter-spacing: 0.12em; text-transform: uppercase;
+    font-size: 0.82rem; letter-spacing: 0.01em;
     color: var(--text-muted); text-decoration: none; font-weight: 500;
-    transition: color 0.25s;
+    transition: color 0.25s, background 0.25s;
+    padding: 0.5rem 0.95rem; border-radius: 100px;
   }
-  .nav-links a:hover { color: var(--gold); }
+  .nav-links a:hover { color: var(--text); background: var(--card); }
+  .nav-cta {
+    background: var(--text); color: var(--bg) !important;
+    padding: 0.55rem 1.3rem !important;
+    font-weight: 600 !important;
+    margin-left: 0.5rem;
+  }
+  .nav-cta:hover { background: var(--gold) !important; }
 
   /* ── HERO ── */
   .hero {
     min-height: 100vh;
-    display: grid; grid-template-columns: 1fr 1fr;
-    padding-top: 64px;
-    position: relative; overflow: hidden;
-  }
-  .hero::before {
-    content: '';
-    position: absolute; top: 0; right: 0;
-    width: 55%; height: 100%;
-    background: linear-gradient(135deg, var(--cream-dark) 0%, #DDD0B8 100%);
-    clip-path: polygon(8% 0%, 100% 0%, 100% 100%, 0% 100%);
-    z-index: 0;
-  }
-  .hero-text {
-    position: relative; z-index: 1;
-    padding: 10% 6% 8% 8%;
     display: flex; flex-direction: column; justify-content: center;
+    padding: 140px 8% 6rem;
+    position: relative; z-index: 1;
   }
-  .hero-eyebrow {
-    font-size: 0.72rem; letter-spacing: 0.2em; text-transform: uppercase;
-    color: var(--gold); font-weight: 500; margin-bottom: 1.5rem;
-    display: flex; align-items: center; gap: 0.8rem;
+  .eyebrow-pill {
+    display: inline-flex; align-items: center; gap: 0.6rem;
+    font-size: 0.76rem; letter-spacing: 0.04em;
+    color: var(--text-muted); font-weight: 500;
+    background: var(--card); border: 1px solid var(--border);
+    padding: 0.45rem 1rem 0.45rem 0.75rem;
+    border-radius: 100px; margin-bottom: 2rem;
+    width: fit-content;
   }
-  .hero-eyebrow::before {
-    content: ''; display: inline-block;
-    width: 32px; height: 1px; background: var(--gold);
+  .eyebrow-dot {
+    width: 8px; height: 8px; border-radius: 50%;
+    background: var(--teal);
+    box-shadow: 0 0 0 3px rgba(34,211,197,0.18);
   }
+  .hero-grid { display: grid; grid-template-columns: 1.3fr 1fr; gap: 4rem; align-items: end; }
   .hero-name {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: clamp(3rem, 5vw, 5rem);
-    font-weight: 300; line-height: 1.05;
-    color: var(--brown);
-    margin-bottom: 0.5rem;
+    font-size: clamp(2.8rem, 5.5vw, 5.2rem);
+    font-weight: 700; line-height: 1.02;
+    letter-spacing: -0.03em;
+    color: var(--text);
+    margin-bottom: 1.25rem;
   }
-  .hero-name em {
-    font-style: italic; color: var(--gold);
-    display: block;
+  .hero-name .grad {
+    background: var(--grad-brand);
+    -webkit-background-clip: text; background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
   .hero-title {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: clamp(1rem, 1.8vw, 1.35rem);
-    color: var(--gold); font-weight: 400;
-    font-style: italic; margin-bottom: 2rem;
+    font-size: 1.15rem; font-weight: 400;
+    color: var(--text-muted); max-width: 560px;
+    line-height: 1.55; margin-bottom: 1.5rem;
   }
+  .rotator {
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    height: 1.55em;
+    overflow: hidden;
+    color: var(--text);
+    font-weight: 600;
+    min-width: 1px;
+  }
+  .rotator-word {
+    position: absolute;
+    left: 0; top: 0;
+    white-space: nowrap;
+    opacity: 0;
+    transform: translateY(60%);
+    transition: opacity 0.5s cubic-bezier(0.16,1,0.3,1), transform 0.5s cubic-bezier(0.16,1,0.3,1);
+    background: var(--grad-brand);
+    -webkit-background-clip: text; background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .rotator-word.is-active {
+    position: relative;
+    opacity: 1;
+    transform: translateY(0);
+  }
+  .rotator-word.is-leaving {
+    opacity: 0;
+    transform: translateY(-60%);
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .rotator-word { transition: none; }
+  }
+
   .hero-desc {
-    font-size: 0.92rem; line-height: 1.75;
-    color: var(--text-muted); max-width: 440px;
-    margin-bottom: 3rem; font-weight: 300;
+    font-size: 0.95rem; line-height: 1.8;
+    color: var(--text-dim); max-width: 520px;
+    margin-bottom: 2.5rem; font-weight: 300;
   }
   .hero-ctas { display: flex; gap: 1rem; flex-wrap: wrap; }
   .btn-primary {
-    background: var(--gold); color: var(--white);
-    padding: 0.75rem 2rem; font-size: 0.78rem;
-    letter-spacing: 0.1em; text-transform: uppercase;
-    text-decoration: none; font-weight: 500;
-    transition: background 0.25s, transform 0.2s;
-    display: inline-block;
+    background: var(--grad-brand); color: #fff;
+    padding: 0.85rem 1.75rem; font-size: 0.85rem;
+    border-radius: 100px; font-weight: 600;
+    text-decoration: none; display: inline-flex; align-items: center; gap: 0.5rem;
+    transition: transform 0.25s, box-shadow 0.25s;
+    box-shadow: 0 8px 24px rgba(255,61,127,0.25);
   }
-  .btn-primary:hover { background: var(--brown-mid); transform: translateY(-2px); }
+  .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 12px 32px rgba(255,61,127,0.4); }
   .btn-outline {
-    border: 1px solid var(--gold); color: var(--gold);
-    padding: 0.75rem 2rem; font-size: 0.78rem;
-    letter-spacing: 0.1em; text-transform: uppercase;
-    text-decoration: none; font-weight: 500;
-    transition: all 0.25s; display: inline-block;
+    border: 1px solid var(--border); color: var(--text);
+    background: var(--card);
+    padding: 0.85rem 1.75rem; font-size: 0.85rem;
+    border-radius: 100px; font-weight: 500;
+    text-decoration: none; display: inline-flex; align-items: center;
+    transition: all 0.25s;
   }
-  .btn-outline:hover { background: var(--gold); color: var(--white); }
+  .btn-outline:hover { background: var(--card-hover); border-color: rgba(255,255,255,0.2); }
 
-  .hero-visual {
-    position: relative; z-index: 1;
-    display: flex; flex-direction: column;
-    justify-content: center; align-items: flex-end;
-    padding: 8% 8% 8% 4%;
-  }
   .stats-grid {
     display: grid; grid-template-columns: 1fr 1fr;
-    gap: 1.5rem; width: 100%; max-width: 380px;
+    gap: 1rem;
   }
   .stat-card {
-    background: var(--white);
-    padding: 1.5rem 1.25rem;
-    border-left: 3px solid var(--gold);
-    animation: fadeUp 0.6s ease both;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    padding: 1.5rem 1.35rem;
+    transition: transform 0.3s cubic-bezier(0.16,1,0.3,1), border-color 0.3s, background 0.3s;
   }
-  .stat-card:nth-child(2) { animation-delay: 0.1s; }
-  .stat-card:nth-child(3) { animation-delay: 0.2s; }
-  .stat-card:nth-child(4) { animation-delay: 0.3s; }
-  .stat-card:nth-child(5) { animation-delay: 0.4s; }
+  .stat-card:hover { transform: translateY(-4px); border-color: rgba(255,255,255,0.18); background: var(--card-hover); }
+  .stat-card.span2 { grid-column: span 2; }
+  .stat-icon {
+    width: 34px; height: 34px; border-radius: 10px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1rem; margin-bottom: 0.9rem;
+  }
   .stat-num {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 2.4rem; font-weight: 600;
-    color: var(--gold); line-height: 1;
-    margin-bottom: 0.3rem;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1.9rem; font-weight: 700;
+    color: var(--text); line-height: 1;
+    margin-bottom: 0.4rem; letter-spacing: -0.02em;
   }
   .stat-label {
-    font-size: 0.72rem; color: var(--text-muted);
-    letter-spacing: 0.05em; font-weight: 400;
+    font-size: 0.76rem; color: var(--text-muted);
+    font-weight: 400; line-height: 1.4;
   }
 
-  @keyframes fadeUp {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
+  .ic-orange { background: rgba(255,138,80,0.15); color: var(--orange); }
+  .ic-pink { background: rgba(255,61,127,0.15); color: var(--pink); }
+  .ic-purple { background: rgba(168,85,247,0.15); color: var(--purple); }
+  .ic-blue { background: rgba(79,124,255,0.15); color: var(--blue); }
+  .ic-teal { background: rgba(34,211,197,0.15); color: var(--teal); }
+  .ic-gold { background: rgba(245,185,66,0.15); color: var(--gold); }
+
+  /* ── MOTION: scroll reveal ── */
+  .reveal {
+    opacity: 0;
+    transform: translateY(28px);
+    transition: opacity 0.8s cubic-bezier(0.16,1,0.3,1), transform 0.8s cubic-bezier(0.16,1,0.3,1);
+  }
+  .reveal.is-visible { opacity: 1; transform: translateY(0); }
+  @media (prefers-reduced-motion: reduce) {
+    .reveal { opacity: 1; transform: none; transition: none; }
+    html { scroll-behavior: auto; }
   }
 
   /* ── SECTIONS ── */
-  section { padding: 6rem 8%; }
+  section { padding: 6.5rem 8%; position: relative; z-index: 1; }
   .section-label {
-    font-size: 0.72rem; letter-spacing: 0.2em; text-transform: uppercase;
-    color: var(--gold); font-weight: 500; margin-bottom: 1rem;
-    display: flex; align-items: center; gap: 0.8rem;
+    display: inline-flex; align-items: center; gap: 0.6rem;
+    font-size: 0.76rem; letter-spacing: 0.04em;
+    color: var(--text-muted); font-weight: 500; margin-bottom: 1.25rem;
+    background: var(--card); border: 1px solid var(--border);
+    padding: 0.4rem 0.9rem; border-radius: 100px;
   }
-  .section-label::before {
-    content: ''; width: 32px; height: 1px; background: var(--gold);
-  }
+  .section-label .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--pink); }
   .section-title {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: clamp(2rem, 3.5vw, 3rem);
-    font-weight: 300; color: var(--brown);
+    font-size: clamp(1.9rem, 3.2vw, 2.75rem);
+    font-weight: 700; color: var(--text);
     line-height: 1.15; margin-bottom: 3rem;
+    letter-spacing: -0.02em;
   }
-  .section-title em { font-style: italic; color: var(--gold); }
+  .section-title em {
+    font-style: normal;
+    background: var(--grad-brand);
+    -webkit-background-clip: text; background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
 
   /* ── ABOUT ── */
-  #about { background: var(--white); }
+  #about { background: var(--bg-soft); }
   .about-grid {
     display: grid; grid-template-columns: 1.2fr 1fr;
-    gap: 6rem; align-items: center;
+    gap: 4.5rem; align-items: start;
   }
   .about-text p {
-    font-size: 1rem; line-height: 1.85;
+    font-size: 0.98rem; line-height: 1.9;
     color: var(--text-muted); margin-bottom: 1.25rem; font-weight: 300;
   }
-  .about-text p strong { color: var(--brown); font-weight: 500; }
+  .about-text p strong { color: var(--text); font-weight: 500; }
   .about-pull {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 1.6rem; font-style: italic;
-    color: var(--gold); line-height: 1.4;
-    border-left: 3px solid var(--gold);
-    padding-left: 1.5rem; margin: 2rem 0;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1.25rem; font-weight: 500;
+    color: var(--text); line-height: 1.5;
+    background: var(--card); border: 1px solid var(--border);
+    border-left: 3px solid var(--pink);
+    padding: 1.5rem 1.75rem; margin: 2rem 0;
+    border-radius: 0 14px 14px 0;
   }
+  .recog-item {
+    border: 1px solid var(--border); background: var(--card);
+    border-radius: 14px; padding: 1.1rem 1.3rem; margin-bottom: 1rem;
+    transition: transform 0.25s, border-color 0.25s;
+  }
+  .recog-item:hover { transform: translateY(-3px); border-color: rgba(255,255,255,0.18); }
+  .recog-year {
+    font-size: 0.7rem; letter-spacing: 0.06em; text-transform: uppercase;
+    color: var(--gold); margin-bottom: 0.35rem; font-weight: 600;
+  }
+  .recog-title { font-family: 'Space Grotesk', sans-serif; font-size: 1rem; color: var(--text); font-weight: 600; }
+  .recog-desc { font-size: 0.82rem; color: var(--text-muted); margin-top: 0.3rem; line-height: 1.5; }
+  .lang-row {
+    display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 0.5rem;
+    background: var(--card); border: 1px solid var(--border);
+    border-radius: 14px; padding: 1.1rem 1.3rem;
+  }
+  .lang-label { font-size: 0.7rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--gold); font-weight: 600; width: 100%; margin-bottom: 0.4rem; }
+  .lang-row span.tag-lang { font-size: 0.82rem; color: var(--text-muted); }
 
   /* ── SKILLS ── */
-  #skills { background: var(--cream); }
+  #skills { background: var(--bg); }
   .skills-layout {
     display: grid; grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
+    gap: 1.5rem;
   }
   .skill-group {
-    background: var(--white);
-    padding: 2.5rem 2rem;
-    border-top: 3px solid var(--gold);
-    transition: transform 0.25s, box-shadow 0.25s;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    padding: 2rem 1.75rem;
+    transition: transform 0.3s cubic-bezier(0.16,1,0.3,1), border-color 0.3s, background 0.3s;
   }
-  .skill-group:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 16px 40px rgba(139,105,20,0.12);
-  }
+  .skill-group:hover { transform: translateY(-6px); border-color: rgba(255,255,255,0.18); background: var(--card-hover); }
   .skill-group-title {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 1.1rem; font-weight: 600;
-    color: var(--brown); margin-bottom: 1.25rem;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1.05rem; font-weight: 600;
+    color: var(--text); margin-bottom: 1.25rem;
+    display: flex; align-items: center; gap: 0.6rem;
   }
+  .skill-group-title::before {
+    content: ''; width: 8px; height: 8px; border-radius: 2px;
+  }
+  .skill-group:nth-child(1) .skill-group-title::before { background: var(--orange); }
+  .skill-group:nth-child(2) .skill-group-title::before { background: var(--purple); }
+  .skill-group:nth-child(3) .skill-group-title::before { background: var(--teal); }
   .skill-tags { display: flex; flex-wrap: wrap; gap: 0.5rem; }
   .tag {
-    font-size: 0.72rem; padding: 0.3rem 0.75rem;
-    background: var(--cream); color: var(--text-muted);
-    letter-spacing: 0.04em; font-weight: 400;
-    border: 1px solid rgba(139,105,20,0.2);
+    font-size: 0.74rem; padding: 0.4rem 0.85rem;
+    background: rgba(255,255,255,0.03); color: var(--text-muted);
+    font-weight: 400;
+    border: 1px solid var(--border-soft);
+    border-radius: 100px;
   }
 
   /* ── EXPERIENCE ── */
-  #experience { background: var(--white); }
-  .timeline { position: relative; padding-left: 2rem; }
+  #experience { background: var(--bg-soft); }
+  .timeline { position: relative; padding-left: 2.5rem; }
   .timeline::before {
     content: ''; position: absolute;
-    left: 0; top: 0; bottom: 0;
-    width: 1px; background: var(--gold-pale);
+    left: 0; top: 6px; bottom: 6px;
+    width: 2px;
+    background: linear-gradient(180deg, var(--orange), var(--pink), var(--purple), var(--blue));
+    opacity: 0.5;
   }
   .timeline-item {
-    position: relative; margin-bottom: 3rem;
-    padding-left: 2rem;
+    position: relative; margin-bottom: 2.5rem;
+    padding: 1.5rem 1.75rem;
+    background: var(--card); border: 1px solid var(--border);
+    border-radius: 16px;
   }
   .timeline-dot {
-    position: absolute; left: -2rem;
-    top: 0.3rem;
-    width: 10px; height: 10px;
-    background: var(--gold);
+    position: absolute; left: -2.5rem;
+    top: 1.7rem;
+    width: 12px; height: 12px;
+    background: var(--bg-soft);
+    border: 2px solid var(--pink);
     border-radius: 50%;
-    transform: translateX(-4.5px);
+    transform: translateX(-5px);
   }
   .job-header {
     display: flex; justify-content: space-between;
     align-items: flex-start; flex-wrap: wrap;
-    margin-bottom: 0.5rem; gap: 0.5rem;
+    margin-bottom: 0.4rem; gap: 0.5rem;
   }
   .job-title {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 1.3rem; font-weight: 600;
-    color: var(--brown);
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1.15rem; font-weight: 600;
+    color: var(--text);
   }
   .job-period {
-    font-size: 0.75rem; color: var(--gold);
-    letter-spacing: 0.08em; font-weight: 500;
+    font-size: 0.72rem; color: var(--bg);
+    background: var(--teal);
+    padding: 0.25rem 0.7rem; border-radius: 100px;
+    font-weight: 600;
     white-space: nowrap;
   }
   .job-company {
-    font-size: 0.85rem; color: var(--gold-light);
-    font-style: italic; margin-bottom: 0.75rem; font-weight: 400;
+    font-size: 0.85rem; color: var(--pink);
+    margin-bottom: 0.9rem; font-weight: 500;
   }
   .job-bullets { list-style: none; }
   .job-bullets li {
-    font-size: 0.88rem; color: var(--text-muted);
-    line-height: 1.7; padding-left: 1rem; position: relative;
-    margin-bottom: 0.4rem; font-weight: 300;
+    font-size: 0.87rem; color: var(--text-muted);
+    line-height: 1.7; padding-left: 1.1rem; position: relative;
+    margin-bottom: 0.5rem; font-weight: 300;
   }
   .job-bullets li::before {
-    content: '—'; position: absolute; left: 0;
-    color: var(--gold); font-size: 0.75rem;
+    content: '›'; position: absolute; left: 0;
+    color: var(--orange); font-weight: 700;
   }
 
   /* ── IMPACT ── */
   #impact {
-    background: var(--brown);
+    background: var(--bg);
     position: relative; overflow: hidden;
   }
-  #impact::before {
-    content: '';
-    position: absolute; top: -50%; left: -10%;
-    width: 600px; height: 600px;
-    border-radius: 50%;
-    background: radial-gradient(circle, rgba(201,168,76,0.12) 0%, transparent 70%);
-  }
-  #impact .section-label { color: var(--gold-pale); }
-  #impact .section-label::before { background: var(--gold-pale); }
-  #impact .section-title { color: var(--cream); }
   .impact-grid {
     display: grid; grid-template-columns: repeat(3, 1fr);
-    gap: 2px;
+    gap: 1.25rem;
   }
   .impact-card {
-    background: rgba(255,255,255,0.05);
-    padding: 2.5rem 2rem;
-    text-align: center;
-    border: 1px solid rgba(201,168,76,0.15);
-    transition: background 0.25s;
+    background: var(--card);
+    padding: 2.25rem 1.75rem;
+    text-align: left;
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    transition: transform 0.3s, border-color 0.3s;
   }
-  .impact-card:hover { background: rgba(201,168,76,0.1); }
+  .impact-card:hover { transform: translateY(-5px); border-color: rgba(255,255,255,0.2); }
   .impact-num {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 3.5rem; font-weight: 300;
-    color: var(--gold-light); line-height: 1;
-    margin-bottom: 0.5rem;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 3rem; font-weight: 700;
+    line-height: 1;
+    margin-bottom: 0.6rem;
+    background: var(--grad-brand);
+    -webkit-background-clip: text; background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
   .impact-desc {
-    font-size: 0.8rem; color: var(--gold-pale);
-    letter-spacing: 0.06em; line-height: 1.5;
-    font-weight: 300;
+    font-size: 0.85rem; color: var(--text-muted);
+    line-height: 1.5;
+    font-weight: 400;
   }
 
   /* ── PORTFOLIO ── */
-  #portfolio { background: var(--cream); }
+  #portfolio { background: var(--bg-soft); }
   .portfolio-grid {
     display: grid; grid-template-columns: repeat(3, 1fr);
     gap: 1.5rem;
   }
   .portfolio-card {
-    background: var(--white);
-    padding: 2rem;
-    border-bottom: 3px solid transparent;
-    transition: border-color 0.25s, transform 0.25s, box-shadow 0.25s;
+    background: var(--card);
+    padding: 2rem 1.75rem;
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    transition: transform 0.3s cubic-bezier(0.16,1,0.3,1), border-color 0.3s;
     cursor: default;
   }
   .portfolio-card:hover {
-    border-color: var(--gold);
-    transform: translateY(-4px);
-    box-shadow: 0 12px 32px rgba(139,105,20,0.1);
+    border-color: rgba(255,255,255,0.2);
+    transform: translateY(-5px);
   }
   .pc-icon {
-    font-size: 1.8rem; margin-bottom: 1rem;
-    display: block;
+    width: 40px; height: 40px; border-radius: 11px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1.1rem; margin-bottom: 1.25rem;
   }
   .pc-category {
-    font-size: 0.68rem; letter-spacing: 0.15em; text-transform: uppercase;
-    color: var(--gold); font-weight: 500; margin-bottom: 0.5rem;
+    font-size: 0.68rem; letter-spacing: 0.06em; text-transform: uppercase;
+    color: var(--text-dim); font-weight: 600; margin-bottom: 0.6rem;
   }
   .pc-title {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 1.15rem; font-weight: 600;
-    color: var(--brown); margin-bottom: 0.75rem;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1.05rem; font-weight: 600;
+    color: var(--text); margin-bottom: 0.75rem;
     line-height: 1.3;
   }
   .pc-desc {
@@ -352,196 +477,224 @@
     line-height: 1.7; font-weight: 300;
   }
   .pc-metric {
-    margin-top: 1rem; padding-top: 1rem;
-    border-top: 1px solid var(--cream-dark);
-    font-size: 0.75rem; color: var(--gold);
-    font-weight: 500; letter-spacing: 0.04em;
+    margin-top: 1.1rem; padding-top: 1.1rem;
+    border-top: 1px solid var(--border-soft);
+    font-size: 0.76rem; color: var(--teal);
+    font-weight: 500;
   }
 
   /* ── TOOLS ── */
-  #tools { background: var(--white); }
+  #tools { background: var(--bg); }
   .tools-grid {
     display: grid; grid-template-columns: repeat(4, 1fr);
-    gap: 1.5rem;
+    gap: 1.25rem;
+  }
+  .tool-group {
+    background: var(--card); border: 1px solid var(--border);
+    border-radius: 16px; padding: 1.5rem 1.5rem;
   }
   .tool-group h4 {
-    font-size: 0.72rem; letter-spacing: 0.12em; text-transform: uppercase;
-    color: var(--gold); font-weight: 500; margin-bottom: 0.75rem;
-    padding-bottom: 0.5rem;
-    border-bottom: 1px solid var(--gold-pale);
+    font-size: 0.72rem; letter-spacing: 0.06em; text-transform: uppercase;
+    color: var(--text); font-weight: 600; margin-bottom: 1rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid var(--border-soft);
   }
   .tool-list { list-style: none; }
   .tool-list li {
     font-size: 0.82rem; color: var(--text-muted);
-    padding: 0.3rem 0; border-bottom: 1px solid var(--cream-dark);
+    padding: 0.4rem 0;
     font-weight: 300;
+    display: flex; align-items: center; gap: 0.6rem;
+  }
+  .tool-list li::before {
+    content: ''; width: 5px; height: 5px; border-radius: 50%;
+    background: var(--purple); flex-shrink: 0;
   }
 
   /* ── EVENTS ── */
-  #events { background: var(--cream); }
+  #events { background: var(--bg-soft); }
   .events-year-group { margin-bottom: 2.5rem; }
   .events-year-label {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 1.6rem; font-weight: 300;
-    color: var(--brown); margin-bottom: 1.25rem;
-    padding-bottom: 0.5rem;
-    border-bottom: 1px solid var(--gold-pale);
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1.4rem; font-weight: 700;
+    color: var(--text); margin-bottom: 1.25rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid var(--border-soft);
     display: flex; align-items: center; gap: 1rem;
   }
   .events-year-label span {
-    font-size: 0.68rem; letter-spacing: 0.12em; text-transform: uppercase;
-    color: var(--text-muted); font-weight: 400; font-family: 'DM Sans', sans-serif;
+    font-size: 0.7rem; letter-spacing: 0.05em; text-transform: uppercase;
+    color: var(--text-dim); font-weight: 500; font-family: 'Inter', sans-serif;
+    background: var(--card); border: 1px solid var(--border);
+    padding: 0.25rem 0.7rem; border-radius: 100px;
   }
   .events-row {
     display: grid; grid-template-columns: repeat(4, 1fr);
     gap: 1rem;
   }
   .event-card {
-    background: var(--white);
-    padding: 1.25rem 1.25rem 1rem;
-    border-top: 3px solid var(--gold-pale);
-    transition: border-color 0.25s, transform 0.25s, box-shadow 0.25s;
+    background: var(--card);
+    padding: 1.4rem 1.4rem 1.15rem;
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    transition: border-color 0.25s, transform 0.25s;
   }
   .event-card:hover {
-    border-color: var(--gold);
+    border-color: rgba(255,255,255,0.2);
     transform: translateY(-4px);
-    box-shadow: 0 10px 28px rgba(139,105,20,0.1);
-  }
-  .event-card.upcoming {
-    border-top-color: var(--gold);
-    background: linear-gradient(135deg, #fffdf7 0%, #f9f4e8 100%);
-  }
-  .event-badge {
-    font-size: 0.62rem; letter-spacing: 0.15em; text-transform: uppercase;
-    color: var(--white); background: var(--gold);
-    padding: 0.18rem 0.5rem; display: inline-block;
-    margin-bottom: 0.5rem; font-weight: 500;
   }
   .event-name {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 1.05rem; font-weight: 600;
-    color: var(--brown); margin-bottom: 0.3rem;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1rem; font-weight: 600;
+    color: var(--text); margin-bottom: 0.4rem;
     line-height: 1.25;
   }
   .event-date {
-    font-size: 0.72rem; color: var(--gold); font-weight: 500;
-    margin-bottom: 0.2rem; letter-spacing: 0.03em;
+    font-size: 0.74rem; color: var(--orange); font-weight: 500;
+    margin-bottom: 0.25rem;
   }
   .event-loc {
-    font-size: 0.75rem; color: var(--text-muted); font-weight: 300;
+    font-size: 0.78rem; color: var(--text-muted); font-weight: 300;
   }
 
   /* ── EDUCATION / CERTS ── */
-  #education { background: var(--white); }
-  .edu-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; }
+  #education { background: var(--bg); }
+  .edu-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; }
   .edu-item {
-    border-left: 3px solid var(--gold);
-    padding-left: 1.5rem; margin-bottom: 2rem;
+    border-left: 2px solid var(--purple);
+    padding-left: 1.5rem; margin-bottom: 1.75rem;
   }
   .edu-degree {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 1.15rem; font-weight: 600; color: var(--brown);
-    margin-bottom: 0.2rem;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1.05rem; font-weight: 600; color: var(--text);
+    margin-bottom: 0.25rem;
   }
-  .edu-inst { font-size: 0.85rem; color: var(--gold-light); font-style: italic; margin-bottom: 0.2rem; }
-  .edu-year { font-size: 0.75rem; color: var(--text-muted); }
+  .edu-inst { font-size: 0.85rem; color: var(--pink); margin-bottom: 0.2rem; }
+  .edu-year { font-size: 0.75rem; color: var(--text-dim); }
   .cert-list { list-style: none; }
   .cert-list li {
     font-size: 0.85rem; color: var(--text-muted);
-    padding: 0.6rem 0; border-bottom: 1px solid var(--cream-dark);
+    padding: 0.7rem 0; border-bottom: 1px solid var(--border-soft);
     display: flex; align-items: center; gap: 0.75rem;
     font-weight: 300;
   }
   .cert-list li::before {
-    content: '✦'; color: var(--gold); font-size: 0.55rem;
-    flex-shrink: 0;
+    content: ''; width: 7px; height: 7px; border-radius: 2px;
+    background: var(--teal); flex-shrink: 0;
   }
 
   /* ── CONTACT ── */
   #contact {
-    background: var(--brown);
+    background: var(--bg-soft);
     text-align: center;
     position: relative; overflow: hidden;
   }
-  #contact::after {
-    content: 'RICHA';
-    position: absolute;
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 20rem; font-weight: 600;
-    color: rgba(255,255,255,0.02);
-    top: 50%; left: 50%;
-    transform: translate(-50%, -50%);
-    pointer-events: none; white-space: nowrap;
+  #contact .section-label { justify-content: center; margin-left: auto; margin-right: auto; }
+  .contact-card {
+    background: var(--card); border: 1px solid var(--border);
+    border-radius: 24px; padding: 3rem 2rem;
+    max-width: 720px; margin: 0 auto;
   }
-  #contact .section-label { color: var(--gold-pale); justify-content: center; }
-  #contact .section-label::before { background: var(--gold-pale); }
-  #contact .section-title { color: var(--cream); }
   .contact-grid {
     display: flex; justify-content: center; gap: 3rem;
-    flex-wrap: wrap; margin-bottom: 3rem;
+    flex-wrap: wrap; margin-bottom: 2.5rem;
   }
   .contact-item { text-align: center; }
   .contact-label {
-    font-size: 0.68rem; letter-spacing: 0.18em; text-transform: uppercase;
-    color: var(--gold-light); margin-bottom: 0.4rem; font-weight: 500;
+    font-size: 0.7rem; letter-spacing: 0.06em; text-transform: uppercase;
+    color: var(--text-dim); margin-bottom: 0.5rem; font-weight: 600;
   }
   .contact-val {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 1.05rem; color: var(--cream);
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1.05rem; color: var(--text);
     text-decoration: none;
     transition: color 0.2s;
   }
-  .contact-val:hover { color: var(--gold-light); }
+  .contact-val:hover { color: var(--pink); }
   .divider {
     width: 60px; height: 1px;
-    background: rgba(201,168,76,0.4);
-    margin: 0 auto 3rem;
+    background: var(--border);
+    margin: 0 auto 2.5rem;
   }
-  .social-links { display: flex; gap: 1.5rem; justify-content: center; }
+  .social-links { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
   .social-link {
-    font-size: 0.72rem; letter-spacing: 0.15em; text-transform: uppercase;
-    color: var(--gold-light); text-decoration: none;
-    border: 1px solid rgba(201,168,76,0.3);
-    padding: 0.6rem 1.5rem;
+    font-size: 0.78rem; font-weight: 600;
+    color: var(--text); text-decoration: none;
+    border: 1px solid var(--border);
+    background: rgba(255,255,255,0.03);
+    padding: 0.7rem 1.5rem;
+    border-radius: 100px;
     transition: all 0.25s;
   }
-  .social-link:hover { background: var(--gold); color: var(--white); border-color: var(--gold); }
+  .social-link:hover { background: var(--grad-brand); border-color: transparent; }
 
   footer {
-    background: #1A1000;
-    padding: 1.5rem 8%;
+    background: var(--bg);
+    padding: 1.75rem 8%;
     text-align: center;
+    border-top: 1px solid var(--border-soft);
+    position: relative; z-index: 1;
   }
   footer p {
-    font-size: 0.72rem; color: rgba(255,255,255,0.25);
-    letter-spacing: 0.08em;
+    font-size: 0.75rem; color: var(--text-dim);
+    letter-spacing: 0.02em;
+  }
+
+  /* ── MOTION extras ── */
+  .timeline-dot { transition: transform 0.4s cubic-bezier(0.34,1.56,0.64,1), box-shadow 0.4s ease; }
+  .timeline-item.is-visible .timeline-dot {
+    transform: translateX(-5px) scale(1.2);
+    box-shadow: 0 0 0 5px rgba(255,61,127,0.15);
+  }
+  .btn-primary, .btn-outline { position: relative; overflow: hidden; }
+  .btn-primary::before, .btn-outline::before {
+    content: ''; position: absolute; top: 0; left: -75%;
+    width: 50%; height: 100%;
+    background: linear-gradient(120deg, transparent, rgba(255,255,255,0.25), transparent);
+    transform: skewX(-20deg);
+    transition: left 0.6s ease;
+  }
+  .btn-primary:hover::before, .btn-outline:hover::before { left: 125%; }
+
+  .hero-grid > * > * { opacity: 0; animation: heroIn 0.85s cubic-bezier(0.16,1,0.3,1) forwards; }
+  .eyebrow-pill { animation-delay: 0.05s; }
+  .hero-name { animation-delay: 0.2s; }
+  .hero-title { animation-delay: 0.35s; }
+  .hero-desc { animation-delay: 0.5s; }
+  .hero-ctas { animation-delay: 0.65s; }
+  @keyframes heroIn {
+    from { opacity: 0; transform: translateY(18px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .hero-grid > * > * { animation: none !important; opacity: 1 !important; }
   }
 
   /* ── RESPONSIVE ── */
   @media (max-width: 960px) {
-    .hero { grid-template-columns: 1fr; min-height: auto; }
-    .hero::before { display: none; }
-    .hero-text { padding: 8rem 6% 3rem; }
-    .hero-visual { padding: 2rem 6% 4rem; }
-    .stats-grid { max-width: 100%; }
-    .about-grid, .edu-grid { grid-template-columns: 1fr; gap: 3rem; }
+    .hero-grid { grid-template-columns: 1fr; gap: 3rem; }
+    .about-grid, .edu-grid { grid-template-columns: 1fr; gap: 2.5rem; }
     .skills-layout, .portfolio-grid, .impact-grid { grid-template-columns: 1fr 1fr; }
     .tools-grid { grid-template-columns: 1fr 1fr; }
     .events-row { grid-template-columns: 1fr 1fr !important; }
     nav { padding: 0 4%; }
-    .nav-links { gap: 1.2rem; }
+    .nav-links { display: none; }
+    section { padding: 4.5rem 6%; }
   }
   @media (max-width: 600px) {
     .skills-layout, .portfolio-grid, .impact-grid,
-    .tools-grid { grid-template-columns: 1fr; }
+    .tools-grid, .stats-grid { grid-template-columns: 1fr; }
+    .stat-card.span2 { grid-column: span 1; }
     .events-row { grid-template-columns: 1fr !important; }
-    .hero-ctas { flex-direction: column; }
-    .contact-grid { flex-direction: column; gap: 2rem; }
-    .nav-links { display: none; }
+    .hero-ctas { flex-direction: column; align-items: stretch; }
+    .hero-ctas a { justify-content: center; }
+    .contact-grid { flex-direction: column; gap: 1.75rem; }
   }
 </style>
 </head>
 <body>
+
+<div class="glow glow-1"></div>
 
 <!-- NAV -->
 <nav>
@@ -552,48 +705,52 @@
     <li><a href="#impact">Impact</a></li>
     <li><a href="#portfolio">Portfolio</a></li>
     <li><a href="#tools">Tools</a></li>
-    <li><a href="#contact">Contact</a></li>
+    <li><a href="#contact" class="nav-cta">Contact</a></li>
   </ul>
 </nav>
 
 <!-- HERO -->
 <section class="hero" id="home">
-  <div class="hero-text">
-    <p class="hero-eyebrow">Strategic Marketing Leader</p>
-    <h1 class="hero-name">
-      Hello,<br>
-      <em>I am Richa.</em>
-    </h1>
-    <p class="hero-title">From Insight to Impact in Marketing Analytics, Digital Strategy, Global Campaigns & B2B SaaS</p>
-    <p class="hero-desc">
-      15+ years driving brand growth through data, creativity & storytelling — across Europe, Asia, and the Middle East. Specialising in B2B marketing, GTM strategy, and integrated campaigns that deliver measurable results.
-    </p>
-    <div class="hero-ctas">
-      <a href="#portfolio" class="btn-primary">View My Work</a>
-      <a href="#contact" class="btn-outline">Get In Touch</a>
+  <div class="hero-grid">
+    <div class="hero-text">
+      <div><span class="eyebrow-pill"><span class="eyebrow-dot"></span>Open to senior remote roles</span></div>
+      <h1 class="hero-name">Hello, I'm<br><span class="grad">Richa Dutt Nandan.</span></h1>
+      <p class="hero-title">Global Marketing Consultant for <span class="rotator" id="rotator"><span class="rotator-word is-active">B2B Enterprises.</span><span class="rotator-word">Startups.</span><span class="rotator-word">E-commerce Brands.</span><span class="rotator-word">SaaS Companies.</span><span class="rotator-word">Local Businesses.</span></span></p>
+      <p class="hero-desc">
+        16+ years driving brand growth through data, creativity & storytelling — across Europe, Asia, and the Middle East. Specialising in B2B marketing, GTM strategy, and integrated campaigns that deliver measurable results.
+      </p>
+      <div class="hero-ctas">
+        <a href="#portfolio" class="btn-primary">View My Work →</a>
+        <a href="#contact" class="btn-outline">Get In Touch</a>
+      </div>
     </div>
-  </div>
-  <div class="hero-visual">
-    <div class="stats-grid">
-      <div class="stat-card">
-        <div class="stat-num">15+</div>
-        <div class="stat-label">Years of Experience</div>
-      </div>
-      <div class="stat-card">
-        <div class="stat-num">40%</div>
-        <div class="stat-label">YoY Organic Traffic Growth</div>
-      </div>
-      <div class="stat-card">
-        <div class="stat-num">2.5×</div>
-        <div class="stat-label">Inbound Leads Generated</div>
-      </div>
-      <div class="stat-card">
-        <div class="stat-num">15+</div>
-        <div class="stat-label">Countries Reached</div>
-      </div>
-      <div class="stat-card" style="grid-column: span 2;">
-        <div class="stat-num">€1M+</div>
-        <div class="stat-label">Annual Marketing Budget Managed</div>
+    <div class="hero-visual">
+      <div class="stats-grid">
+        <div class="stat-card">
+          <div class="stat-icon ic-orange">◆</div>
+          <div class="stat-num">16+</div>
+          <div class="stat-label">Years of Experience</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon ic-pink">↑</div>
+          <div class="stat-num">40%</div>
+          <div class="stat-label">YoY Organic Traffic Growth</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon ic-purple">×</div>
+          <div class="stat-num">2.5×</div>
+          <div class="stat-label">Inbound Leads Generated</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon ic-blue">◎</div>
+          <div class="stat-num">15+</div>
+          <div class="stat-label">Countries Reached</div>
+        </div>
+        <div class="stat-card span2">
+          <div class="stat-icon ic-teal">€</div>
+          <div class="stat-num">€1M+</div>
+          <div class="stat-label">Annual Marketing Budget Managed</div>
+        </div>
       </div>
     </div>
   </div>
@@ -603,38 +760,34 @@
 <section id="about">
   <div class="about-grid">
     <div class="about-text">
-      <p class="section-label">About Me</p>
+      <p class="section-label"><span class="dot"></span>About Me</p>
       <h2 class="section-title">Driving brand growth<br><em>through data & storytelling</em></h2>
-      <p>With over <strong>14 years of experience in marketing</strong>, I specialise in building and executing high-impact B2B strategies across global markets. My expertise spans digital marketing, brand and campaign management, and data-driven market analysis — supported by industry-recognised certifications.</p>
+      <p>With over <strong>16 years of experience in marketing</strong>, I specialise in building and executing high-impact B2B strategies across global markets. My expertise spans digital marketing, brand and campaign management, and data-driven market analysis — supported by industry-recognised certifications.</p>
       <p>I excel in leading cross-functional teams and driving integrated campaigns across digital, social, events, and content platforms. Skilled in aligning marketing with business objectives, I leverage insights, customer behaviour, and analytics to strengthen brand positioning, optimise performance, and accelerate growth.</p>
       <div class="about-pull">"Driving Brand Growth Through Data, Creativity & Storytelling"</div>
       <p>Based in Mumbai, India — available for <strong>senior remote B2B marketing roles</strong> globally.</p>
     </div>
     <div>
-      <p class="section-label">Recognition</p>
-      <div style="display: flex; flex-direction: column; gap: 1.25rem; margin-top: 1.5rem;">
-        <div style="border-left: 3px solid var(--gold); padding-left: 1.25rem;">
-          <div style="font-size: 0.72rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.3rem;">2025 & 2023</div>
-          <div style="font-family: 'Cormorant Garamond', serif; font-size: 1.05rem; color: var(--brown); font-weight: 600;">SMART4SEA Europort Cyber Security Award</div>
-          <div style="font-size: 0.82rem; color: var(--text-muted); margin-top: 0.2rem;">Shortlisted nominee — innovation & compliance excellence in shipping</div>
-        </div>
-        <div style="border-left: 3px solid var(--gold); padding-left: 1.25rem;">
-          <div style="font-size: 0.72rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.3rem;">2017</div>
-          <div style="font-family: 'Cormorant Garamond', serif; font-size: 1.05rem; color: var(--brown); font-weight: 600;">Gem of the Month</div>
-          <div style="font-size: 0.82rem; color: var(--text-muted); margin-top: 0.2rem;">Motilal Oswal Financial Services</div>
-        </div>
-        <div style="border-left: 3px solid var(--gold); padding-left: 1.25rem;">
-          <div style="font-size: 0.72rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.3rem;">2011</div>
-          <div style="font-family: 'Cormorant Garamond', serif; font-size: 1.05rem; color: var(--brown); font-weight: 600;">Top Performer</div>
-          <div style="font-size: 0.82rem; color: var(--text-muted); margin-top: 0.2rem;">Citibank India</div>
-        </div>
-        <div style="background: var(--cream); padding: 1.25rem 1.5rem; margin-top: 0.5rem;">
-          <div style="font-size: 0.72rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.75rem;">Languages</div>
-          <div style="display: flex; gap: 1rem;">
-            <span style="font-size: 0.82rem; color: var(--text-muted);">🇬🇧 English — Fluent</span>
-            <span style="font-size: 0.82rem; color: var(--text-muted);">🇩🇪 German — B1</span>
-          </div>
-        </div>
+      <p class="section-label"><span class="dot"></span>Recognition</p>
+      <div class="recog-item">
+        <div class="recog-year">2025 & 2023</div>
+        <div class="recog-title">SMART4SEA Europort Cyber Security Award</div>
+        <div class="recog-desc">Shortlisted nominee — innovation & compliance excellence in shipping</div>
+      </div>
+      <div class="recog-item">
+        <div class="recog-year">2017</div>
+        <div class="recog-title">Gem of the Month</div>
+        <div class="recog-desc">Motilal Oswal Financial Services</div>
+      </div>
+      <div class="recog-item">
+        <div class="recog-year">2011</div>
+        <div class="recog-title">Top Performer</div>
+        <div class="recog-desc">Citibank India</div>
+      </div>
+      <div class="lang-row">
+        <div class="lang-label">Languages</div>
+        <span class="tag-lang">🇬🇧 English — Fluent</span>
+        <span class="tag-lang">🇩🇪 German — B1</span>
       </div>
     </div>
   </div>
@@ -642,7 +795,7 @@
 
 <!-- SKILLS -->
 <section id="skills">
-  <p class="section-label">Skills Snapshot</p>
+  <p class="section-label"><span class="dot"></span>Skills Snapshot</p>
   <h2 class="section-title">Areas of <em>Expertise</em></h2>
   <div class="skills-layout">
     <div class="skill-group">
@@ -692,7 +845,7 @@
 
 <!-- EXPERIENCE -->
 <section id="experience">
-  <p class="section-label">Career Journey</p>
+  <p class="section-label"><span class="dot"></span>Career Journey</p>
   <h2 class="section-title">Professional <em>Experience</em></h2>
   <div class="timeline">
     <div class="timeline-item">
@@ -707,7 +860,7 @@
         <li>Spearheaded global GTM strategy for maritime compliance, emissions management, and digital SaaS product portfolios across 15+ markets in Europe, Japan, Asia, and the Middle East.</li>
         <li>Owned ~€1M annual marketing budget; built sales enablement collateral and implemented HubSpot + GA4 attribution to optimise pipeline and ROI.</li>
         <li>Led SEO initiative covering 25 landing pages and 26 blogs — achieving 45% organic traffic growth and 18.9% bounce rate reduction in 8 months.</li>
-        <li>Managed global events branding for Europort 2023, Sea Asia 2025, Bariship 2025, and Posidonia 2022.</li>
+        <li>Managed global events branding for Posidonia (2022, 2026), Europort 2023, Sea Asia 2025, Bariship 2025, and Asia Pacific Maritime & Sea Japan 2026.</li>
         <li>Secured organic media coverage in HuffPost, Ship & Bunker, One Magazine, and Naftemporiki.</li>
       </ul>
     </div>
@@ -785,8 +938,8 @@
 
 <!-- IMPACT -->
 <section id="impact">
-  <p class="section-label">Measurable Results</p>
-  <h2 class="section-title" style="color: var(--cream);">Numbers That <em>Speak</em></h2>
+  <p class="section-label"><span class="dot"></span>Measurable Results</p>
+  <h2 class="section-title">Numbers That <em>Speak</em></h2>
   <div class="impact-grid">
     <div class="impact-card">
       <div class="impact-num">40%</div>
@@ -817,57 +970,64 @@
 
 <!-- PORTFOLIO HIGHLIGHTS -->
 <section id="portfolio">
-  <p class="section-label">Work Highlights</p>
+  <p class="section-label"><span class="dot"></span>Work Highlights</p>
   <h2 class="section-title">Portfolio <em>Showcase</em></h2>
   <div class="portfolio-grid">
     <div class="portfolio-card">
-      <span class="pc-icon">📈</span>
+      <div class="pc-icon ic-orange">📈</div>
       <div class="pc-category">SEO & Performance</div>
       <div class="pc-title">SEO Strategy & Execution — Varuna Marine</div>
       <p class="pc-desc">Comprehensive SEO initiative covering 25 landing pages and 26 blogs. Keyword research, on-page optimisation, technical SEO enhancements, and content alignment for maritime compliance topics.</p>
       <div class="pc-metric">↑ 45% organic traffic · ↓ 18.9% bounce rate</div>
     </div>
     <div class="portfolio-card">
-      <span class="pc-icon">✍️</span>
+      <div class="pc-icon ic-pink">✍️</div>
       <div class="pc-category">Content & Thought Leadership</div>
       <div class="pc-title">Maritime Compliance Blog Series</div>
       <p class="pc-desc">SEO-optimised blog series simplifying complex maritime regulations — EU ETS, ballast water management, and cyber security — for global shipping audiences.</p>
       <div class="pc-metric">↑ 38.4% page view growth</div>
     </div>
     <div class="portfolio-card">
-      <span class="pc-icon">📧</span>
+      <div class="pc-icon ic-purple">📧</div>
       <div class="pc-category">Email Marketing</div>
       <div class="pc-title">Quarterly Maritime Digest Newsletter</div>
       <p class="pc-desc">Created and managed the "Navigating Innovation, Compliance & Collaboration" newsletter series, delivering regulatory updates, thought leadership, and service highlights to global stakeholders.</p>
       <div class="pc-metric">Optimised CTAs · Maximised open & click-through rates</div>
     </div>
     <div class="portfolio-card">
-      <span class="pc-icon">🎯</span>
+      <div class="pc-icon ic-blue">🎯</div>
       <div class="pc-category">Brand Campaigns</div>
       <div class="pc-title">#ThinkEquityThinkMotilalOswal</div>
       <p class="pc-desc">App-based equity awareness campaign for Motilal Oswal driving brand trust, market leadership, and user engagement. Leveraged targeted creatives and in-app messaging to educate investors.</p>
       <div class="pc-metric">↑ 60% lead generation · Higher investor conversion</div>
     </div>
     <div class="portfolio-card">
-      <span class="pc-icon">🗓️</span>
+      <div class="pc-icon ic-teal">🗓️</div>
       <div class="pc-category">Strategic Planning</div>
       <div class="pc-title">Content Calendar & Multi-channel Strategy</div>
       <p class="pc-desc">Designed and implemented structured content calendars syncing blogs, SEO, social media, webinars, and brand campaigns. Used Trello and Google Sheets for cross-team collaboration.</p>
       <div class="pc-metric">+35% publishing consistency · 100% on-time delivery</div>
     </div>
     <div class="portfolio-card">
-      <span class="pc-icon">🗺️</span>
+      <div class="pc-icon ic-gold">🗺️</div>
       <div class="pc-category">Visual & Creative</div>
       <div class="pc-title">Infographics & Brand Visual Assets</div>
       <p class="pc-desc">In-house design of maritime infographics, brochures, and roll-up banners for global trade shows. All developed in Canva, optimised for web, social media, and print.</p>
-      <div class="pc-metric">4 global events branded · Europort, Sea Asia, Bariship, Posidonia</div>
+      <div class="pc-metric">5 global events branded · Europort, Sea Asia, Bariship, Posidonia, APM/Sea Japan</div>
+    </div>
+    <div class="portfolio-card">
+      <div class="pc-icon ic-orange">🧭</div>
+      <div class="pc-category">Marketing Operations</div>
+      <div class="pc-title">Marketing Operations Infrastructure & Team Responsibility Matrix</div>
+      <p class="pc-desc">Built a comprehensive marketing operations workbook mapping pipelines, ownership, and activity frequency across the team, plus a redesigned responsibility matrix presentation for leadership review.</p>
+      <div class="pc-metric">Team-wide pipeline & ownership clarity</div>
     </div>
   </div>
 </section>
 
 <!-- TOOLS -->
 <section id="tools">
-  <p class="section-label">Tech Stack</p>
+  <p class="section-label"><span class="dot"></span>Tech Stack</p>
   <h2 class="section-title">Tools & <em>Platforms</em></h2>
   <div class="tools-grid">
     <div class="tool-group">
@@ -914,35 +1074,27 @@
 
 <!-- EVENTS -->
 <section id="events">
-  <p class="section-label">Global Presence</p>
+  <p class="section-label"><span class="dot"></span>Global Presence</p>
   <h2 class="section-title">Events & <em>Conferences</em></h2>
-
-  <!-- Upcoming -->
-  <div class="events-year-group">
-    <div class="events-year-label">Upcoming <span>Coming Soon</span></div>
-    <div class="events-row" style="grid-template-columns: repeat(3,1fr);">
-      <div class="event-card upcoming">
-        <span class="event-badge">Upcoming</span>
-        <div class="event-name">Posidonia 2026</div>
-        <div class="event-date">June 1–5, 2026</div>
-        <div class="event-loc">Athens, Greece</div>
-      </div>
-    </div>
-  </div>
 
   <!-- 2026 -->
   <div class="events-year-group">
-    <div class="events-year-label">2026 <span>2 events</span></div>
-    <div class="events-row" style="grid-template-columns: repeat(3,1fr);">
+    <div class="events-year-label">2026 <span>3 events</span></div>
+    <div class="events-row">
+      <div class="event-card">
+        <div class="event-name">Asia Pacific Maritime (APM) 2026</div>
+        <div class="event-date">March 18, 2026</div>
+        <div class="event-loc">Singapore</div>
+      </div>
       <div class="event-card">
         <div class="event-name">Sea Japan 2026</div>
         <div class="event-date">April 22–24, 2026</div>
         <div class="event-loc">Tokyo, Japan</div>
       </div>
       <div class="event-card">
-        <div class="event-name">Asia Pacific Maritime (APM) 2026</div>
-        <div class="event-date">March 18, 2026</div>
-        <div class="event-loc">Singapore</div>
+        <div class="event-name">Posidonia 2026</div>
+        <div class="event-date">June 1–5, 2026</div>
+        <div class="event-loc">Athens, Greece</div>
       </div>
     </div>
   </div>
@@ -1019,7 +1171,7 @@
 
 <!-- EDUCATION -->
 <section id="education">
-  <p class="section-label">Credentials</p>
+  <p class="section-label"><span class="dot"></span>Credentials</p>
   <h2 class="section-title">Education & <em>Certifications</em></h2>
   <div class="edu-grid">
     <div>
@@ -1048,32 +1200,144 @@
 
 <!-- CONTACT -->
 <section id="contact">
-  <p class="section-label">Let's Connect</p>
-  <h2 class="section-title" style="margin-bottom: 1.5rem;">Get in <em>Touch</em></h2>
-  <div class="divider"></div>
-  <div class="contact-grid">
-    <div class="contact-item">
-      <div class="contact-label">Email</div>
-      <a href="mailto:richa.dutt79@gmail.com" class="contact-val">richa.dutt79@gmail.com</a>
+  <p class="section-label"><span class="dot"></span>Let's Connect</p>
+  <h2 class="section-title" style="margin-bottom: 2.5rem;">Get in <em>Touch</em></h2>
+  <div class="contact-card">
+    <div class="contact-grid">
+      <div class="contact-item">
+        <div class="contact-label">Email</div>
+        <a href="mailto:richa.dutt79@gmail.com" class="contact-val">richa.dutt79@gmail.com</a>
+      </div>
+      <div class="contact-item">
+        <div class="contact-label">Mobile</div>
+        <a href="tel:+919819994008" class="contact-val">+91 981 999 4008</a>
+      </div>
+      <div class="contact-item">
+        <div class="contact-label">Location</div>
+        <span class="contact-val">Mumbai, India</span>
+      </div>
     </div>
-    <div class="contact-item">
-      <div class="contact-label">Mobile</div>
-      <a href="tel:+919819994008" class="contact-val">+91 981 999 4008</a>
+    <div class="divider"></div>
+    <div class="social-links">
+      <a href="https://www.linkedin.com/in/richaduttnandan/" target="_blank" class="social-link">LinkedIn</a>
+      <a href="https://richaduttnandan.my.canva.site/" target="_blank" class="social-link">Portfolio Site</a>
     </div>
-    <div class="contact-item">
-      <div class="contact-label">Location</div>
-      <span class="contact-val">Mumbai, India</span>
-    </div>
-  </div>
-  <div class="social-links">
-    <a href="https://www.linkedin.com/in/richaduttnandan/" target="_blank" class="social-link">LinkedIn</a>
-    <a href="https://richaduttnandan.my.canva.site/" target="_blank" class="social-link">Portfolio Site</a>
   </div>
 </section>
 
 <footer>
-  <p>© 2025 Richa Dutt Nandan — Strategic Marketing & Content Specialist</p>
+  <p>© 2026 Richa Dutt Nandan — Strategic Marketing & Content Specialist</p>
 </footer>
+
+<script>
+(function () {
+  var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* ---- Rotating hero words ---- */
+  var rotator = document.getElementById('rotator');
+  if (rotator) {
+    var words = rotator.querySelectorAll('.rotator-word');
+    var current = 0;
+
+    // Size the rotator to the widest word so layout doesn't jump
+    function sizeRotator() {
+      var maxW = 0;
+      words.forEach(function (w) {
+        maxW = Math.max(maxW, w.getBoundingClientRect().width);
+      });
+      rotator.style.width = Math.ceil(maxW) + 'px';
+    }
+    sizeRotator();
+    window.addEventListener('resize', sizeRotator);
+
+    if (!reduceMotion && words.length > 1) {
+      setInterval(function () {
+        var next = (current + 1) % words.length;
+        words[current].classList.remove('is-active');
+        words[current].classList.add('is-leaving');
+        words[next].classList.add('is-active');
+        setTimeout(function () {
+          words[current].classList.remove('is-leaving');
+        }, 520);
+        current = next;
+      }, 2200);
+    }
+  }
+
+  /* ---- Scroll reveal ---- */
+  var revealSelectors = [
+    '.section-label', '.section-title', '.about-pull',
+    '.skill-group', '.timeline-item', '.impact-card',
+    '.portfolio-card', '.tool-group', '.event-card',
+    '.edu-item', '.cert-list', '.contact-item', '.stat-card',
+    '.recog-item'
+  ];
+  var revealEls = document.querySelectorAll(revealSelectors.join(','));
+
+  revealEls.forEach(function (el, i) {
+    el.classList.add('reveal');
+    var siblingIndex = Array.prototype.indexOf.call(el.parentNode.children, el);
+    el.style.transitionDelay = reduceMotion ? '0s' : Math.min(siblingIndex * 70, 350) + 'ms';
+  });
+
+  if (reduceMotion) {
+    revealEls.forEach(function (el) { el.classList.add('is-visible'); });
+  } else if ('IntersectionObserver' in window) {
+    var revealObserver = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+
+    revealEls.forEach(function (el) { revealObserver.observe(el); });
+  } else {
+    revealEls.forEach(function (el) { el.classList.add('is-visible'); });
+  }
+
+  /* ---- Animated counters (stat-num / impact-num) ---- */
+  function animateCounter(el) {
+    var raw = el.textContent.trim();
+    var match = raw.match(/^([^\d]*)([\d.]+)(.*)$/);
+    if (!match) return;
+    var prefix = match[1], target = parseFloat(match[2]), suffix = match[3];
+    var isDecimal = match[2].indexOf('.') !== -1;
+    var duration = 1200;
+    var startTime = null;
+
+    function step(ts) {
+      if (!startTime) startTime = ts;
+      var progress = Math.min((ts - startTime) / duration, 1);
+      var eased = 1 - Math.pow(1 - progress, 3);
+      var current = target * eased;
+      el.textContent = prefix + (isDecimal ? current.toFixed(1) : Math.round(current)) + suffix;
+      if (progress < 1) {
+        requestAnimationFrame(step);
+      } else {
+        el.textContent = prefix + (isDecimal ? target.toFixed(1) : target) + suffix;
+      }
+    }
+    requestAnimationFrame(step);
+  }
+
+  var counterEls = document.querySelectorAll('.stat-num, .impact-num');
+  if (reduceMotion) {
+    // leave static values as-is
+  } else if ('IntersectionObserver' in window) {
+    var counterObserver = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          animateCounter(entry.target);
+          counterObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.5 });
+    counterEls.forEach(function (el) { counterObserver.observe(el); });
+  }
+})();
+</script>
 
 </body>
 </html>
